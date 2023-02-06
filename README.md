@@ -1,43 +1,85 @@
-# CSS-frameworks-2023
+
 
 Goal
-To apply knowledge of Bootstrap and SASS to build a responsive front end for a social media application.
+To apply knowledge of JavaScript techniques to implement the front-end functionality for a social media application.
+
+API
+The API you are using for this project can be found under Social EndPoints in the Noroff API documentation.
 
 Brief
-You are tasked with creating 3 pages in HTML using Bootstrap and SASS:
+You have been tasked with producing a new JavaScript front-end client for an existing social media platform. The client application must be attractive and responsive, but you have an otherwise blank slate in terms of theme design language.
 
-Homepage
-Profile page
-Login page
-The homepage should have a feed of posts from the user’s contacts, a search bar, and a form to create a new post.
+Using the provided API and API documentation, create a functioning user interface that allows for viewing, posting, editing and deleting social media content.
 
-The profile page should have a profile image, details about the user, a list of the user’s contacts, their posts and a form to post to their wall.
+Social API routes require authorisation via JWT (JSON Web Tokens). You will need to register an account and login to access your token.
 
-The login page should have a form to login to the application. Ensure to include HTML form validation and use /profile as the action attribute.
+To complete the required features, you will also need to make use of GET, POST, PUT, and DELETE HTTP methods.
 
-You will only be working on the visuals for this project at this stage; forms do not need to submit data, for example.
+Using localStorage is highly recommended, especially for storing JWT tokens.
 
-Submission for this project will follow the pattern used in professional development. You are required to seek feedback from your peers as well as the teachers to complete this assignment.
+A finished project fulfils the requirements below with an easy to use and error-free user interface.
 
-Process
-Create a design or wireframe for each page
-Create a new public repository on GitHub
-Create a new project folder for this repository
-Create a new git branch for this project
-Create a package.json file
-Install Bootstrap, SASS and Live Server
-Configure NPM scripts in package.json
-Implement your design using Bootstrap and SASS overrides
-Create a Pull Request to merge your changes to the main branch
-Share this Pull Request and request peer review
-Discuss and implement the feedback gathered from peer review
-Share this Pull Request with a teacher for their approval
-Complete the approved Pull Request, or implement the required changes
-Delivery
-For peer review, please submit a link to your repository to the Moodle forum. You should review 2 of your peers’ submissions.
+Required features
 
-Please submit your public GitHub repository URL and any supplementary files, such as wireframes. Your repo should have an active PR that the teachers will review.
+The following user stories are required for a passing submission:
 
-Design files will not be included in your grade but will help to provide additional context to the marker.
+User with @noroff.no or @stud.noroff.no email can register profile
+Registered user can login
+User can view a post content feed
+User can filter the post content feed
+User can search the post content feed
+User can view a post content item by ID
+User can create a post content item
+User can update a post content item
+User can delete a post content item
+Additional features
 
-Please make sure to exclude node_modules by using a .gitignore file.
+The following user stories are optional:
+
+User can create a comment on a post
+User can edit profile media
+User can follow/unfollow a profile
+User can react to a post content item
+Team work
+
+This assignment allows for team work in groups of 2 students. Students forming a work group will need to coordinate closely throughout the planning, development and testing processes. By working in a pair, you are expected to implement additional features.
+
+Commit regularly and use branches to prevent conflicts with your teammate as you work on the same codebase.
+
+Development process
+Create or select one repository to use throughout this project.
+Create a js2 branch from the default master or main branch.
+You may use either Trello or GitHub Projects to manage your development tasks. If you are using Trello, please make sure that your board is public and that a link is provided in your readme.md file. Make sure to detail tasks accurately and divide them evenly if working a group.
+
+Examples of overly vague tasks:
+
+Make the HTML for the post page
+Website Styling
+JavaScript for API
+Test the website
+Examples of detailed & accurate tasks:
+
+Create search form HTML
+Search form SCSS styling
+Filter posts function
+Implement search event listener
+Review the API Guide and API Documentation.
+Plan your approach, desired features and work strategy.
+Implement the required features as per your work plan.
+
+Note: All PRs should be made to js2, not to the default branch. For example, branch search-functionality should be created from, and merged into, branch js2.
+Submit a link to your repository at the correct branch on the Moodle forum for peer review.
+Review 2 of your peers projects. (4 per team)
+
+Watch: Video: Branching and providing feedback
+Open a Pull Request from js2 into the default branch. Contact a teacher on Discord for their feedback. If there is a particular area of concern, please ensure to pass this on with your request. Add this teacher as a reviewer on your PR. Please make sure to plan for this review prior to your deadline.
+Implement the feedback gathered from your review, but leave the PR open.
+Deliver the link to this PR in Moodle. A passing submission will be approved and merged by the reviewer. This is a direct analogue of the professional review process.
+Restrictions
+Required functionality must be implemented in original, pure JavaScript.
+A CSS Framework may be used to build the application UI.
+A .gitignore file must be provided including node_modules. This folder must be untracked.
+Content posted on the API is public and associated with your identity. Be appropriate and respectful.
+Resources
+API Guide
+API Documentation.
