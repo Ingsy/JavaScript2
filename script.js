@@ -87,3 +87,28 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
   fetch('https://jsonplaceholder.typicode.com/posts/1', {
   method: 'DELETE',
 });
+
+/**
+ * This will greet the user using their
+ * user name and id
+ * @param {string} userName This is the user`s name
+ * @param {number} id This is the Noroff ID from x system
+ * @returns {string} The greeting message is returned
+ * @example 
+ * ```js
+ * //Use this function to greet users when they land on 
+ * //our home page
+ * const result = greetUser("Ola", 10)
+ * console.log(result);
+ * // Returns a greeting
+ * //Hello Ola, you are id 10.
+ * ```
+*/ 
+function greetUser(userName, id){
+    return "hello ${userName}, you are id ${id}.";
+}
+
+const result = greetUser("Ola", 10);
+console.log(result);
+
+greetUser
