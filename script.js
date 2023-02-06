@@ -23,6 +23,18 @@ fetch('https://api.noroff.dev/api/v1/auth/login', {
   .then((json) => console.log(json));
 
 
+  //getting a post
+
+  fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+  //getting all posts
+
+  fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
   // creating a new post 
 
   fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -39,5 +51,39 @@ fetch('https://api.noroff.dev/api/v1/auth/login', {
   .then((response) => response.json())
   .then((json) => console.log(json));
 
+//updating a post 
 
+fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PUT',
+  body: JSON.stringify({
+    id: 1,
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+  //patching a post
   
+  fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'PATCH',
+  body: JSON.stringify({
+    title: 'foo',
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then((json) => console.log(json));
+
+  //deleting a post
+
+  fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  method: 'DELETE',
+});
