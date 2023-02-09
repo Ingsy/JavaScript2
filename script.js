@@ -25,19 +25,19 @@ fetch('https://api.noroff.dev/api/v1/auth/login', {
 
   //getting a post
 
-  fetch('https://jsonplaceholder.typicode.com/posts/1')
+  fetch('https://nf-api.onrender.com/api/v1/social/posts/<id>')
   .then((response) => response.json())
   .then((json) => console.log(json));
 
   //getting all posts
 
-  fetch('https://jsonplaceholder.typicode.com/posts')
+  fetch('https://nf-api.onrender.com/api/v1/social/posts')
   .then((response) => response.json())
   .then((json) => console.log(json));
 
   // creating a new post 
 
-  fetch('https://jsonplaceholder.typicode.com/posts', {
+  fetch('https://nf-api.onrender.com/api/v1/social/posts/<id>', {
   method: 'POST',
   body: JSON.stringify({
     title: 'Ingeborg Mellingens post',
@@ -53,7 +53,7 @@ fetch('https://api.noroff.dev/api/v1/auth/login', {
 
 //updating a post 
 
-fetch('https://jsonplaceholder.typicode.com/posts/1', {
+fetch('https://nf-api.onrender.com/api/v1/social/posts/<id>', {
   method: 'PUT',
   body: JSON.stringify({
     id: 1,
@@ -84,7 +84,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1', {
 
   //deleting a post
 
-  fetch('https://jsonplaceholder.typicode.com/posts/1', {
+  fetch('https://nf-api.onrender.com/api/v1/social/posts/<id>', {
   method: 'DELETE',
 });
 
@@ -114,6 +114,24 @@ console.log(result);
 greetUser
 
 
+//factory function to greet person that logs in 
+function createPerson(firstName, lastName, country, city) {
+  return {
+    firstName: firstName,
+    lastName: lastName,
+    address: {
+      country: country,
+      city: city,
+    },
+    greet: function () {
+      console.log(`Hello, I am ${this.firstName} ${this.lastName}.`);
+    },
+  };
+}
+
+const ola = createPerson('Ola', 'Nordmann', 'Norway', 'Oslo');
+ola.greet();
+
 
 //Array Methods filter()
 
@@ -130,3 +148,8 @@ const friends = [
   );
   
   console.log(filteredFriends);
+
+
+   
+
+ 
