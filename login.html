@@ -46,32 +46,36 @@
       <div class="container-fluid">
         <div class="row ">
             <div class="col-12 m-4">
-              <form class="needs-validation" novalidate>
+              <form id="loginForm" class="needs-validation" novalidate>
               <div class="mb-4">
-                <label for="Username" class="form-label">Username (Email address)</label>
-                <input type="email" class="form-control" id="Username" value="" required aria-describedby="Username">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" required pattern="/^[\w]+$/gm" class="form-control" id="name" title="user name must only contain lower cas and upper cas letter, numbers and underscore (_) Example: A_user2023">
+              </div>
+              <div class="mb-4">
+                <label for="Username" class="form-label">E-mail</label>
+                <input type="email" name="email" required pattern="/^[\w\-.]+@(stud.)?noroff.no$/gm" title="Only @(stud.)noroff.no domains are allowed to register." class="form-control" id="Username">
                 <div class="valid-feedback">
                   Looks good!
                 </div>
               </div>
               <div class="mb-4">
                 <label for="Password1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="Password1">
+                <input type="password" name="password" class="form-control" id="Password1">
                 <div class="valid-feedback">
                   woohoo! 
                 </div>
               </div>
-              <a class="btn btn-secondary" href="/profile.html">Submit</a>
+              <button class="btn btn-secondary" href="/profile.html">Login</button>
             </form></div>
             <div class="col m-">
-            <a class="btn btn-contact-posts mb-4" data-bs-toggle="collapse" href="#NewUser" role="button" aria-expanded="false" aria-controls="NewUser">
+            <a class="btn btn-contact-posts mb-4" data-bs-toggle="collapse" href="#NewUser" role="button">
               create new account
             </a>
           <div class="collapse" id="NewUser">
-            <form class="needs-validation" novalidate>
+            <form id="createUser" class="needs-validation" novalidate>
               <div class="mb-4">
-                <label for="Username" class="form-label">Username (Email address)</label>
-                <input type="email" class="form-control" id="Username" value="" required aria-describedby="Username">
+                <label for="CreateUsername" class="form-label">Username (Email address)</label>
+                <input type="email" class="form-control" id="CreateUsername" value="">
                 <div class="valid-feedback">
                   Looks good!
                 </div>
@@ -101,5 +105,6 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="/src/js/handlers/register.mjs"></script>
   </body>
 </html>
