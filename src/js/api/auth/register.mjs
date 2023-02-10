@@ -16,5 +16,5 @@ const respons = await fetch(registerURL, {
 })
 
 const result = await Response.json()
-console.log(result)
+return result
 }

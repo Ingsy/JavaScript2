@@ -3,18 +3,6 @@ console.log('This is a module');
 
 //search functionality 
 
-//login - mayby use promises?
-
-let isLoading = true;
-fetch("https://jsonplaceholder.typicode.com/todos/1")
-  .then((response) => response.json())
-  .then((json) => console.log(json));
-  .catch((error) => console.log(error))
-  .finally(
-    isLoading = false;
-  )
-
-
   //se posts 
 
   // Fetches data from the URL passed in
