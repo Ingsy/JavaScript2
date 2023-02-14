@@ -229,15 +229,28 @@
                   </h4>
                 </div>
                 <hr class="mx-4 my-4 mt-1 mb-0">
-                  <div class="card-body text-center">
-                    <p class="card-text">
-                     <textarea name="NewPost" id="" cols="30" rows="3" placeholder="write a new post..."></textarea>
-                    </p>
-                      <a href="#" class="btn btn-post">Post message</a>
+                  <div class="card-body text-center" id="createPost">
+                    <div>
+                      <label for="">title</label>
+                      <input type="text" name="title">
+                    </div>
+                    <div class="card-text">
+                      <label for="">Body</label>
+                     <textarea name="body"  cols="30" rows="3" placeholder="write a new post..."></textarea>
+                    </div>
+                    <div>
+                      <label for="">Tags</label>
+                      <input type="text" name="tags">
+                    </div>
+                    <div>
+                      <label for="">media</label>
+                      <input type="text" name="media">
+                    </div>
+                      <button href="#" class="btn btn-post">Post message</button>
                     </div>
                   </div>
                 </div>
-                <div class="col mb-4 mt-4">
+                <form class="col mb-4 mt-4" id="editPost">
                 <div class="card">
                   <img
                     src="/images/David-Schwimmer-Net-worth.jpg"
@@ -245,19 +258,28 @@
                     alt="profile-photo"
                   />
                   <div class="card-body">
+                    <div>
+                    <label for="">title</label>
+                    <input type="text" name="title" required>
+                  </div>
+                  <div>
+                    <label for=""></label>
                     <p class="card-text text-center mb-4 mx-5">
                       I`m the holiday armadillo?
                     </p>
+                  </div>
   <hr class="mb-0"><p class="text-start">
-    <em>16.02.2023</em>
+    <em>16.02.2023</em> 
+    <button class="btn">edit</button>
   </p></div>
   <div class="contact-show">
     <i class="fa fa-thumbs-up"></i>
     <i class="fa fa-comment"></i>
     <i class="fa fa-share"></i>
+    
   </div>
                     </div>
-                  </div>
+                  </form>
                 <div class="col mb-4">
                   <div class="card">
                     <img
@@ -271,6 +293,7 @@
                       </p>
                       <hr class="mb-0"><p class="text-start">
                         <em>01.01.2023</em>
+                        <button class="btn">edit</button>
                       </p></div>
                       <div class="contact-show">
                         <i class="fa fa-thumbs-up"></i>
@@ -294,6 +317,7 @@
                         </p>
                         <hr class="mb-0"><p class="text-start">
                           <em>16.05.2023</em>
+                          <button class="btn">edit</button>
                         </p></div>
                         <div class="contact-show">
                           <i class="fa fa-thumbs-up"></i>
