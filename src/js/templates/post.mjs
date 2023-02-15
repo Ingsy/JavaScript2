@@ -13,8 +13,6 @@ export function postTemplateB(postData){
         img.alt = `Image from ${postData.title}`
         post.append(img)
     }
-
-
     return post;
 }
 

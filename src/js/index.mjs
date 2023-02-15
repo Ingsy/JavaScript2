@@ -1,20 +1,7 @@
 
-import * as listener from "./handlers/index.mjs";
-import * as templates from "./templates/index.mjs"
-import * as post from "./api/posts/index.mjs"
+import router from "./router.mjs";
 
-
-const path = location.pathname; 
-
-if (path === "login/") {
-    listeners.setLoginFormListener()
-} else if (path === "register/") {
-    listeners.setRegisterFormListener()
-} else if (path === "/post/create/") {
-    listeners.setCreatePostFormListeners()
-} else if (path === "/post/edit/") {
-    listeners.setUpdatePostListener()
-}
+router(); 
 
 // post.createPost()
 // post.updatePost()
@@ -26,7 +13,7 @@ if (path === "login/") {
 
 //async function testTemplate(){
 //    const posts = await postMethods.getPosts();
-//    const container = document.querySelector("#");
+//    const container = document.querySelector("#posts");
 //    templates.renderPostTemplates(posts, container);
 //}
 
