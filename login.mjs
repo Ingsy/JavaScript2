@@ -33,15 +33,15 @@
     }
   }
   const userToRegister = {
-    "name": "ingeborg123",                          
-    "email": "ingeborg_mellingen@noroff.no",           
+    "name": "ingeborg",                          
+    "email": "ingeborgm@noroff.no",           
     "password": "Oliver2022",                  
   };
   const registerUrl = `${API_BASE_URL}/api/v1/social/auth/register`;
 
 
 
-  // registerUser(registerUrl, userToRegister);
+  //registerUser(registerUrl, userToRegister);
 
 
   async function loginUser(url, userData) {
@@ -67,7 +67,7 @@
 
   //get the data from the form in login.html
   const userToLogin = {
-    email: "ingeborg_mellingen@noroff.no",           
+    email: "ingmel@noroff.no",           
     password: "Oliver2022",  
   };
   

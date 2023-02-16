@@ -1,7 +1,12 @@
 
-import router from "./router.mjs";
 
-router(); 
+import { setRegisterFormListener } from "./js/handlers/register.mjs";
+
+setRegisterFormListener()
+
+// import * as constants from "./api/constants.mjs";
+
+//router(); 
 
 // post.createPost()
 // post.updatePost()
