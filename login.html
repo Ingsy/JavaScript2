@@ -59,36 +59,20 @@
             </form>
           </div>
             <div class="col m-">
-            <a class="btn btn-contact-posts mb-4" data-bs-toggle="collapse" href="#NewUser" role="button">
+            <a class="btn btn-contact-posts mb-4" href="http://127.0.0.1:5500/register.html">
               create new account
             </a>
-          <div class="collapse" id="NewUser">
-            <form id="registerForm">
-              <div class="mb-4">
-                <label for="" class="form-label">Name</label>
-                <input type="text" id="name" name="name" class="form-control" required pattern="^[\w]+$" title="user name must only contain lower case and upper case letter, numbers and underscore (_) Example: A_user2023">
-              </div>
-              <div class="mb-4">
-                <label for="" class="form-label">Email</label>
-                <input type="email" id="email" name="email" class="form-control" required pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only @(stud.)noroff.no domains are allowed to register." >
-              </div>
-              <div class="mb-4">
-                <label for="" class="form-label">Create password</label>
-                <input type="password" id="password" name="password" class="form-control" required minlength="8">
-              </div>
-              <button class="btn btn-secondary" href="#">register</button>
-            </form></div>
           </div>
         </div>
         </div>
       </div>
-    <footer class="m-4">
+    <footer>
       <div class="container">
         <div class="row sm-12">
-          <div class="col-2">Privacy</div>
-          <div class="col-3">Advertisement</div>
-          <div class="col-3">Information cookies</div>
-          <div class="col-3">BeFriendMe@2023</div>
+          <div class="col-2 mb-4">Privacy</div>
+          <div class="col-3 mb-4">Advertisement</div>
+          <div class="col-3 mb-4">Information cookies</div>
+          <div class="col-3 mb-4">BeFriendMe@2023</div>
         </div>
       </div>
     </footer>
@@ -97,7 +81,8 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-   <script type="module" src="/src/js/handlers/register.mjs"></script> 
+   <script type="module" src="/src/js/handlers/register.mjs"></script>
+   <script type="module" src="/src/js/handlers/login.mjs"></script>  
    <script type="module" src="/src/index.mjs"></script> 
   </body>
 </html>

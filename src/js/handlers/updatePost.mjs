@@ -1,5 +1,5 @@
-import { getPost } from "../../../js/api/posts/read.mjs";
-import { updatePost } from "../api/posts/index.mjs";
+import { getPost } from "../posts/read.mjs";
+import { updatePost } from "../posts/index.mjs";
 
 
 export async function setUpdatePostListener() {

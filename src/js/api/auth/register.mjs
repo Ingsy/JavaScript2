@@ -7,7 +7,7 @@ export async function register(profile){
 const registerURL = API_SOCIAL_URL + action;
 const body = JSON.stringify(profile); 
 
-const respons = await fetch(registerURL, {
+const response = await fetch(registerURL, {
     headers:{
         "content-Type": "application/json"
     },
@@ -15,6 +15,7 @@ const respons = await fetch(registerURL, {
     body
 })
 
-const result = await Response.json()
+const result = await response.json()
+alert("You are now registered")
 return result
 }

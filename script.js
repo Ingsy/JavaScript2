@@ -133,21 +133,26 @@ const ola = createPerson('Ola', 'Nordmann', 'Norway', 'Oslo');
 ola.greet();
 
 
-//Array Methods filter()
+function bubbleSort(input) {
+  let array = [...input];
 
-const friends = [
-    { name: 'Monica Geller', hasPosted: true, date: 2023 },
-    { name: 'Phoebe Buffet', hasPosted: true, date: 2022 },
-    { name: 'Chandler Bing', hasPosted: false, date: 2023 },
-    { name: 'Joey Tribbiani', hasPosted: false, date: 2022 },
-    { name: 'Rachel Green', hasPosted: true, date: 2023 },
-  ];
-  
-  const filteredFriends = friends.filter(
-    (friend) => friend.hasPosted && friend.date >= 2023,
-  );
-  
-  console.log(filteredFriends);
+  for (let i = 0; i < array.length; i++) {
+    let hasSwapped = false;
+
+    for (let j = 0; j < array.length; j++) {
+      if (array[j] > array[j + 1]) {
+        let temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+        hasSwapped = true;
+      }
+    }
+    if (!hasSwapped) {
+      return array;
+    }
+  }
+  return array;
+}
 
 
    

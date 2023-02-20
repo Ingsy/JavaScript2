@@ -44,36 +44,29 @@
         </div>
       </nav>
       <div class="container-fluid">
-        <div class="row">
+        <div class="row"></div>
             <div class="col">
-            <h2 class="mt-4 mb-4">create new account</h2> 
-          <div id="NewUser">
-            <form id="CreateUserForm" class="needs-validation" novalidate>
+            <h1 class="mb-4 mt-4">Create account</h1>
+            <form id="registerForm">
               <div class="mb-4">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" name="name" required pattern="/^[\w]+$/gm" class="form-control" id="name" title="user name must only contain lower cas and upper cas letter, numbers and underscore (_) Example: A_user2023">
+                <label for="" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-control" required pattern="^[\w]+$" title="user name must only contain lower case and upper case letter, numbers and underscore (_) Example: A_user2023">
               </div>
               <div class="mb-4">
-                <label for="Username" class="form-label">E-mail</label>
-                <input type="email" name="email" required pattern="/^[\w\-.]+@(stud.)?noroff.no$/gm" title="Only @(stud.)noroff.no domains are allowed to register." class="form-control" id="Username">
-                <div class="valid-feedback">
-                  Looks good!
-                </div>
+                <label for="" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only @(stud.)noroff.no domains are allowed to register." >
               </div>
               <div class="mb-4">
-                <label for="Password1" class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" id="Password1">
-                <div class="valid-feedback">
-                  woohoo! 
-                </div>
+                <label for="" class="form-label">Create password</label>
+                <input type="password" id="password" name="password" class="form-control" required minlength="8">
               </div>
-              <button class="btn btn-secondary mb-4" href="/profile.html">Create</button>
-            </form></div>
+              <button class="btn btn-secondary mb-4" href="#">register</button>
+            </form>
           </div>
         </div>
         </div>
       </div>
-    <footer class="m-4">
+    <footer>
       <div class="container">
         <div class="row sm-12">
           <div class="col-2">Privacy</div>
@@ -88,6 +81,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script type="module" src="/src/js/handlers/register.mjs"></script>
+   <script type="module" src="/src/js/handlers/register.mjs"></script>
+   <script type="module" src="/src/index.mjs"></script> 
   </body>
 </html>
