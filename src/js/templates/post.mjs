@@ -16,10 +16,13 @@ export function postTemplateB(postData){
     return post;
 }
 
+//
 export function renderPostTemplate(postData, parent) {
+
     parent.append(postTemplateB(postData))
 }
 
+//list of posts 
 export function renderPostTemplates(postDataList, parent){
     parent.append(...postDataList.map(postTemplateB))
 }

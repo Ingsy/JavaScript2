@@ -3,6 +3,10 @@ import { setLoginFormListener } from "./js/handlers/login.mjs";
 import { setRegisterFormListener } from "./js/handlers/register.mjs";
 
 import { createPost } from "./js/posts/create.mjs";
+//import { setCreatePostListener } from "./js/handlers/createPost.mjs";
+//import * as postMethods from "./js/posts/index.mjs";
+//import { renderPostTemplates } from "./js/templates/index.mjs";
+
 
 
 const path = location.pathname;
@@ -16,16 +20,26 @@ if (path === "/login.html"){
 
 //router(); 
 
-//post.createPost();
+//async function testTemplate(){
+//    const posts = await postMethods.getPosts(); 
+//    const container = document.querySelector("#post");
+//    templates.renderPostTemplates(posts, container);
+//}
+//testTemplate()
+
+createPost({
+title: " eks post",
+body: "also example"
+})
 // post.updatePost()
 // post.removePost()
 // post.getPost()
 //post.getPosts().then(console.log);
 
-createPost({
-title: "example",
-body: "example"
-})
+//createPost({
+//title: "example",
+//body: "example"
+//})
 
 //updatePost({
     //id: 1,
