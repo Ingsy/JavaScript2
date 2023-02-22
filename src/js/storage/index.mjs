@@ -5,9 +5,13 @@ export function save(key, value) {
 export function load(key) {
     try{
         const value = localStorage.getItem(key);
-        return JSON.parse(value);
-    } catch {
-    return null
+        if (typeof value !== "string"){
+            return JSON.parse(value);
+        }
+        return value;
+    } catch(err) {
+        console.log(err);
+        return null
     }
 }
 

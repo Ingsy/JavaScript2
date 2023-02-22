@@ -3,9 +3,11 @@ import { setLoginFormListener } from "./js/handlers/login.mjs";
 import { setRegisterFormListener } from "./js/handlers/register.mjs";
 
 import { createPost } from "./js/posts/create.mjs";
+import { removePost } from "./js/posts/delete.mjs";
 //import { setCreatePostListener } from "./js/handlers/createPost.mjs";
 //import * as postMethods from "./js/posts/index.mjs";
 //import { renderPostTemplates } from "./js/templates/index.mjs";
+//import * as posts from "./js/posts/index.mjs";
 
 
 
@@ -27,13 +29,13 @@ if (path === "/login.html"){
 //}
 //testTemplate()
 
-createPost({
-title: " eks post",
-body: "also example"
-})
+//createPost({
+//title: "eks post",
+//body: "also example"
+//})
 // post.updatePost()
-// post.removePost()
-// post.getPost()
+//post.removePost(3348)
+//post.getPost(3348)
 //post.getPosts().then(console.log);
 
 //createPost({
