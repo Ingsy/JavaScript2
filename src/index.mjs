@@ -29,10 +29,16 @@ if (path === "/login.html"){
 //}
 //testTemplate()
 
-//createPost({
-//title: "eks post",
-//body: "also example"
-//})
+createPost({
+title: "new eks post",
+body: "new also example"
+})
+
+createPost({
+    title: "another post",
+    body: "oh yes"
+    })
+
 // post.updatePost()
 //post.removePost(3348)
 //post.getPost(3348)

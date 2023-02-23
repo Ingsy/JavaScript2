@@ -17,16 +17,16 @@ const response = await fetch(loginURL, {
 });
 
 //console.log(result);
-//const result = await response.json();
-//localStorage.setItem("token", result.accessToken);
+const result = await response.json();
+localStorage.setItem("token", result.accessToken);
 
 //const token = localstorage.setItem("token");
 
 const { accessToken, ...user } = await response.json();
 
-storage.save("token", result.accessToken);
+//storage.save("token", result.accessToken);
 
-storage.save("profile", user);
+//storage.save("profile", user);
 
 alert("You are now logged in");
 }
