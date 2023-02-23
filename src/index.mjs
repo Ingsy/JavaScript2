@@ -3,13 +3,13 @@ import { setLoginFormListener } from "./js/handlers/login.mjs";
 import { setRegisterFormListener } from "./js/handlers/register.mjs";
 //import { setCreatePostListener } from "./js/handlers/createPost.mjs";
 
-import { createPost } from "./js/posts/create.mjs";
-import { updatePost } from "./js/posts/update.mjs";
+//import { createPost } from "./js/posts/create.mjs";
+//import { updatePost } from "./js/posts/update.mjs";
 //import { removePost } from "./js/posts/delete.mjs";
 //import { setCreatePostListener } from "./js/handlers/createPost.mjs";
 //import * as postMethods from "./js/posts/index.mjs";
 //import { renderPostTemplates } from "./js/templates/index.mjs";
-//import * as posts from "./js/posts/index.mjs";
+import * as post from "./js/posts/index.mjs";
 
 
 
@@ -31,21 +31,24 @@ if (path === "/login.html"){
 //}
 //testTemplate()
 
-createPost({
-title: "new eks post",
-body: "new also example"
-})
+//createPost({
+//title: "new eks post",
+//body: "new also example"
+//})
 
-updatePost({
-id: 3440,
-title: "another post updated",
-body: "oh yes updated"
- })
+//updatePost({
+//id: 3442,
+//title: "another post updated",
+//body: "oh yes updated"
+// })
 
 
-//post.removePost(3348)
-//post.getPost(3348)
-//post.getPosts().then(console.log);
+//removePost(3443)
+//post.getPost()
+post.getPosts().then(console.log);
+//post.createPost()
+//post.removePost()
+//post.updatePost()
 
 //createPost({
 //title: "example",
