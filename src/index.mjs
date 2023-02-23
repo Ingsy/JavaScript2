@@ -1,9 +1,11 @@
 
 import { setLoginFormListener } from "./js/handlers/login.mjs";
 import { setRegisterFormListener } from "./js/handlers/register.mjs";
+//import { setCreatePostListener } from "./js/handlers/createPost.mjs";
 
 import { createPost } from "./js/posts/create.mjs";
-import { removePost } from "./js/posts/delete.mjs";
+import { updatePost } from "./js/posts/update.mjs";
+//import { removePost } from "./js/posts/delete.mjs";
 //import { setCreatePostListener } from "./js/handlers/createPost.mjs";
 //import * as postMethods from "./js/posts/index.mjs";
 //import { renderPostTemplates } from "./js/templates/index.mjs";
@@ -34,12 +36,13 @@ title: "new eks post",
 body: "new also example"
 })
 
-createPost({
-    title: "another post",
-    body: "oh yes"
-    })
+updatePost({
+id: 3440,
+title: "another post updated",
+body: "oh yes updated"
+ })
 
-// post.updatePost()
+
 //post.removePost(3348)
 //post.getPost(3348)
 //post.getPosts().then(console.log);

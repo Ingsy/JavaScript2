@@ -13,13 +13,13 @@ const token = load("token");
 //const tagsArray = postData.tags.split(" ");
 
 const response = await authFetch(createPostURL, {
-    headers: {
-        "content-Type": "application/json",
-        "Authorization": `Bearer ${token}`
-    },
        method,
        body: JSON.stringify(postData)
     })
+
+    const post = await response.json();
+
+    console.log(post);
 }
 
 

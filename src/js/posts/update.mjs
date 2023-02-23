@@ -11,7 +11,7 @@ export async function updatePost(postData) {
     }
 const updatePostURL = `${API_SOCIAL_URL}${action}/${postData.id}`;
 
-const response = await authFetch(createPostURL, {
+const response = await authFetch(updatePostURL, {
         method,
         body: JSON.stringify(postData)
     });
