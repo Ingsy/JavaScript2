@@ -1,28 +1,36 @@
 export function postTemplate(postData){
-    return `<div class="post" id=${postData}>${postData.title}</div>`
-}
+    return`
+<div class="card">
+<div class="contact-show">
+<h4>${postData.id}</h4>
+<img
+  src=" ${postData.avatar}"
+  class="card-img-top text-end"
+  alt="profile-photo"
+/>
+</div>
+<div class="card-body">
+  <div class="text-center">
+    <p class="card-text">
+      ${postData.title}
+    </p>
+    <img src="${postData.media}" class="rounded card-img" alt="...">
+  </div>
+  <hr class="mb-0"><p class="text-start">
+    <em>${postData.created}</em>
+  </p>
+<div class="contact-show">
+<i class="fa fa-thumbs-up"></i>
+<i class="fa fa-comment"></i>
+<i class="fa fa-share"></i>
+<a>edit</a>
+<a>delete</a>
+</div>
+  </div>
+</div>;`
+};
 
-export function postTemplateB(postData){
-    const post = document.createElement("div");
-    post.classList.add("post");
-    post.innerText = postData.title;
-
-    if(postData.media){
-        const img = document.createElement("img");
-        img.src = postData.media;
-        img.alt = `Image from ${postData.title}`
-        post.append(img)
-    }
-    return post;
-}
-
-//
-export function renderPostTemplate(postData, parent) {
-
-    parent.append(postTemplateB(postData))
-}
-
-//list of posts 
-export function renderPostTemplates(postDataList, parent){
-    parent.append(...postDataList.map(postTemplateB))
-}
+//export function renderPostTemplates(postData, parent) {
+    //parent.innerHTML = postTemplate(postData)
+    //parent.append(postTemplate(postData))
+//}

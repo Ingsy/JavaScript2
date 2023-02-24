@@ -40,7 +40,7 @@
                 <a class="nav-link" href="/login.html">Login</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form class="d-flex" role="search" id="searchform">
               <input
                 class="form-control me-2"
                 type="search"
@@ -54,9 +54,9 @@
           </div>
         </div>
       </nav>
-      <div class="container text-center">
+      <div class="container text-center" id="post">
         <div class="row">
-          <div class="col-sm-1 col-md-6 col-lg-6 border-right" id="posts">
+          <div class="col-sm-1 col-md-6 col-lg-6 border-right" id="">
             <h2>Newsfeed</h2>
               <div class="col mt-4">
               <div class="card">
@@ -73,12 +73,15 @@
                     Joey doesn't share food! 
                   </p>
                   <hr class="mb-0"><p class="text-start">
-                    <em>16.05.2023</em>
+                  <em>16.05.2023</em>
+                      
                   </p>
 <div class="contact-show">
   <i class="fa fa-thumbs-up"></i>
   <i class="fa fa-comment"></i>
   <i class="fa fa-share"></i>
+  <a>edit</a>
+  <a>delete</a>
 </div>
                   </div>
                 </div>
@@ -307,6 +310,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="src/js/index.mjs" type="module"></script>
-    <script src="script.js"></script>
+    <script src="src/js/templates/post.mjs" type="module"></script>
+  
   </body>
 </html>

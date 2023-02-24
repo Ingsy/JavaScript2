@@ -1,7 +1,7 @@
-import { createPost } from "../posts/create.mjs";
+import { getPosts } from "../posts/read.mjs";
 
 
-export function setCreatePostFormListener(){
+export async function setReadPostsListener(){
     const form = document.querySelector("#createPost");
 
     if (form){
@@ -9,10 +9,14 @@ export function setCreatePostFormListener(){
             event.preventDefault()
             const form = event.target;
             const formData = new FormData(form); 
-            const post = Object.fromEntries(formData.entries());
+            const post = Object.fromEntries(formData.entries())
     
             //Send it to the API 
-            createPost(post);
-        }); 
-    };
+            createPost(post)
+        }) 
+    }
 }
+
+
+
+

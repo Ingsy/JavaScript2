@@ -11,7 +11,7 @@ export function headers() {
 }
 
 export async function authFetch(url, options) {
-    console.log(headers())
+    console.log(headers());
     return fetch(url, {
         ...options,
         headers: headers()

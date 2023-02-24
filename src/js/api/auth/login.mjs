@@ -24,9 +24,9 @@ localStorage.setItem("token", result.accessToken);
 
 const { accessToken, ...user } = await response.json();
 
-//storage.save("token", result.accessToken);
+storage.save("token", result.accessToken);
 
-//storage.save("profile", user);
+storage.save("profile", user);
 
 alert("You are now logged in");
 }
