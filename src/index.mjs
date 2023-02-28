@@ -1,5 +1,3 @@
-
-
 import * as listeners from "./js/handlers/index.mjs";
 import * as postMethods from "/src/js/posts/index.mjs";
 import { renderPostTemplate } from "./js/templates/index.mjs";
@@ -9,24 +7,21 @@ import { createPost } from "./js/posts/create.mjs";
 import { removePost } from "./js/posts/delete.mjs";
 import { updatePost } from "./js/posts/update.mjs";
 
-
-
 const path = location.pathname;
 
-if (path === "/login.html"){
-    listeners.setLoginFormListener()
-} else if (path === "/register.html"){
-    listeners.setRegisterFormListener()
-} else if (path === "/profile.html"){
-    listeners.setCreatePostFormListener()
-} else if (path === "/editPost.html"){
-    listeners.setUpdatePostFormListener()
+if (path === "/login.html") {
+  listeners.setLoginFormListener();
+} else if (path === "/register.html") {
+  listeners.setRegisterFormListener();
+} else if (path === "/profile.html") {
+  listeners.setCreatePostFormListener();
+} else if (path === "/editPost.html") {
+  listeners.setUpdatePostFormListener();
+} else if (path === "/index.html") {
+  listeners.PostFeed();
 }
 
-
-//router(); 
-
-
+//router();
 
 //createPost({
 //title: "new eks post",
@@ -39,7 +34,6 @@ if (path === "/login.html"){
 //title: "post updated",
 //body: " yes updated"
 //})
-
 
 //removePost(3688)
 //post.getPost()
@@ -54,9 +48,7 @@ if (path === "/login.html"){
 //})
 
 //updatePost({
-    //id: 1,
-    //title: "example",
-    //body: "example"
+//id: 1,
+//title: "example",
+//body: "example"
 //})
-
-listeners.PostFeed();
