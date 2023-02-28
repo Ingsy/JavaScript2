@@ -9,13 +9,12 @@ getPosts(postUrl).then(function () {
 
     delBtn.forEach((delBtnId) => {
         delBtnId.addEventListener("click", function (){
-            console.log(delBtnID.id);
+            console.log(delBtnId.id);
             const confirmDelete = "please comfirm to delete this post";
             if (confirm(confirmDelete)){
-                deletePost(delBtn.id);
+                removePost(3718);
             }
         });
     });
 });
-
 

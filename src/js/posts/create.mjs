@@ -17,7 +17,7 @@ const response = await authFetch(createPostURL, {
        body: JSON.stringify({
         title: postData.title,
         media: postData.media,
-        //tags: tagsArray,
+        tags: postData.tagsArray
     })
 });
 

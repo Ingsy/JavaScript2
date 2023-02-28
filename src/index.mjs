@@ -26,20 +26,7 @@ if (path === "/login.html"){
 
 //router(); 
 
-//async function testTemplate(){
-//   const posts = await postMethods.getPosts(); 
-//    const post = posts[35];
-//    const container = document.querySelector("#post");
-//    renderPostTemplate(post, container);
-//}
-//testTemplate()
 
-//async function testTemplate(){
- //   const posts = await postMethods.getPosts(); 
- //    const container = document.querySelector("#post");
-  //   templates.renderPostTemplates(posts, container);
- //}
- //testTemplate()
 
 //createPost({
 //title: "new eks post",
@@ -48,16 +35,16 @@ if (path === "/login.html"){
 //})
 
 //updatePost({
-//id: 3689,
-//title: "another post updated",
-//body: "oh yes updated"
- //})
+//id: 3727,
+//title: "post updated",
+//body: " yes updated"
+//})
 
 
 //removePost(3688)
 //post.getPost()
 //getPosts().then(console.log);
-//post.createPost()
+//createPost().then(console.log);
 //post.removePost()
 //post.updatePost()
 
@@ -72,7 +59,4 @@ if (path === "/login.html"){
     //body: "example"
 //})
 
-// post.getPost(640).then(console.log)
-
-
-
+listeners.PostFeed();
