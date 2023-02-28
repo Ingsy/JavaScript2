@@ -66,12 +66,9 @@ async function renderPost(post, includeUrl) {
                         />
                       </div>
                         <div class="card-body">
-                        <div class="text-center">
                           <p class="card-text text-start mx-5">
                             ${post[i].title}
-                          </p>
-                          <img src="${post[i].media}" class="rounded card-img" alt="..."></img>
-                          </div>
+                          </p> 
                           <hr class="mb-0"><p class="text-start">
                           <em>${post[i].created}</em>  
                           </p>
@@ -88,4 +85,5 @@ async function renderPost(post, includeUrl) {
         }
     }
 }
+
 

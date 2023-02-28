@@ -4,3 +4,4 @@ export * from "./updatePost.mjs";
 export * from "./login.mjs";
 export * from "./readPosts.mjs";
 export * from "./searchPost.mjs";
+export * from "./deletePost.mjs";

@@ -17,7 +17,7 @@ if (path === "/login.html"){
     listeners.setLoginFormListener()
 } else if (path === "/register.html"){
     listeners.setRegisterFormListener()
-} else if (path === "/createPost.html"){
+} else if (path === "/profile.html"){
     listeners.setCreatePostFormListener()
 } else if (path === "/editPost.html"){
     listeners.setUpdatePostFormListener()
@@ -56,7 +56,7 @@ if (path === "/login.html"){
 
 //removePost(3688)
 //post.getPost()
-getPosts().then(console.log);
+//getPosts().then(console.log);
 //post.createPost()
 //post.removePost()
 //post.updatePost()

@@ -10,14 +10,14 @@ const method = "post";
 export async function createPost(postData) {
 const createPostURL = API_SOCIAL_URL + action;
 const token = load("token"); 
-const tagsArray = postData.tags(" ");
+//const tagsArray = postData.tags(" ");
 
 const response = await authFetch(createPostURL, {
        method,
        body: JSON.stringify({
         title: postData.title,
         media: postData.media,
-        tags: tagsArray,
+        //tags: tagsArray,
     })
 });
 

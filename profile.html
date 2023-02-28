@@ -218,7 +218,7 @@
                 <div class="row">
                 <div class="col mb-4 mt-4">
                 <div class="card"> 
-                  <form class="card-body text-center" id="">
+
                     <div class="contact-show m-1">
                       <img
                         src="/images/David-Schwimmer-Net-worth.jpg"
@@ -230,24 +230,25 @@
                       </h4>
                     </div>
                     <hr class="mx-4 my-4 mt-1 mb-2">
-                    <div>
-                      <label for=""></label>
-                      <input class="form-control" type="text" name="title" placeholder="title">
-                    </div>
-                    <div class="card-text">
-                      <label for=""></label>
-                     <textarea class="form-control" name="body" placeholder="write a new post..." required></textarea>
-                    </div>
-                    <div>
-                      <label for=""></label>
-                      <input class="form-control" type="text" name="tags">
-                    </div>
-                    <div>
-                      <label for=""></label>
-                      <input class="form-control" type="text" name="media">
-                    </div>
-                      <button href="#" class="btn btn-post">Post message</button>
-                  </form>
+                    <form id="createPost">
+                      <div class="mx-4">
+                        <label for="" class="form-label"></label>
+                        <input type="text" name="title" class="form-control" placeholder="Tilte" required>
+                      </div>
+                      <div class="mx-4">
+                        <label for="" class="form-label"></label>
+                        <textarea type="text" name="body" class="form-control" placeholder="body"required></textarea>
+                      </div>
+                      <div class="mx-4">
+                        <label for="" class="form-label"></label>
+                        <input type="text" name="tags" class="form-control" placeholder="tags">
+                      </div>
+                      <div class="mx-4 mb-3">
+                        <label for="" class="form-label"></label>
+                        <input type="url" name="media" class="form-control" placeholder="media">
+                      </div>
+                      <button class="btn btn-secondary mb-4">create Post</button>
+                    </form>
                 </div>
                 <form class="col mb-4 mt-4" id="editPost">
                 <div class="card">
@@ -270,6 +271,7 @@
   <hr class="mb-0"><p class="text-start">
     <em>16.02.2023</em> 
     <button class="btn">edit</button>
+    <button class="btn del-button">delete</button>
   </p></div>
   <div class="contact-show">
     <i class="fa fa-thumbs-up"></i>
@@ -304,9 +306,7 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-    <script src="/src/js/handlers/register.mjs" type="module"></script>
     <script src="/src/js/handlers/index.mjs" type="module"></script>
     <script src="/src/index.mjs" type="module"></script>
-    <script src="/src/js/posts/filter.mjs" type="module"></script>
   </body>
 </html>
