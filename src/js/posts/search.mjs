@@ -1,14 +1,25 @@
+import { setsearchFormListener } from "../handlers/searchPost.mjs";
 
+function searchPosts(posts){
+  setsearchFormListener.onkeyup = function (event) {
+    const searchValue = event.target.value.trim().toLowerCase();
+    const filteredSearch = post.filter(function (posts){
+      if (posts.title.toLowerCase().includes(searchValue)){
+        return true;
+      }
+    });
+    displaySearchResult(searchPosts);
+  };
+}
 
-const friends = [
-    { name: "Monica" },
-    { name: "Chandler" },
-    { name: "Joey" },
-    { name: "Phoebe" },
-    { name: "Rachel" },
-  ];
+  // can use Object.entries() here maybe? 
+
+  //const person = {
+   // firstName: 'Ola',
+    //lastName: 'Nordmann',
+    //module: 'JavaScript',
+  //};
   
-  const foundfriend = friends.find(({ name }) => name[0].toLowerCase() === 'j');
-  
-  console.log(foundfriend);
-  
+  //Object.entries(person).forEach(([key, value]) => {
+  //  console.log('key:', key, 'value:', value);
+  //});

@@ -30,7 +30,7 @@ export function postTemplate(postData){
 </div>;`
 };
 
-//export function renderPostTemplates(postData, parent) {
-    //parent.innerHTML = postTemplate(postData)
-    //parent.append(postTemplate(postData))
-//}
+export function renderPostTemplates(postData, parent) {
+    parent.innerHTML = postTemplate(postData)
+    parent.append(postTemplate(postData))
+}

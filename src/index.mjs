@@ -1,10 +1,13 @@
 
 
 import * as listeners from "./js/handlers/index.mjs";
-import * as postMethods from "./js/posts/index.mjs";
+import * as postMethods from "/src/js/posts/index.mjs";
 import { renderPostTemplate } from "./js/templates/index.mjs";
 import * as templates from "./js/templates/index.mjs";
-import { renderPostTemplates } from "./js/templates/postb.mjs";
+import { getPosts } from "./js/posts/read.mjs";
+import { createPost } from "./js/posts/create.mjs";
+import { removePost } from "./js/posts/delete.mjs";
+import { updatePost } from "./js/posts/update.mjs";
 
 
 
@@ -40,19 +43,20 @@ if (path === "/login.html"){
 
 //createPost({
 //title: "new eks post",
-//body: "new also example"
+//body: "new also example",
+//media: "https://pricespy-75b8.kxcdn.com/product/standard/280/6017430.jpg"
 //})
 
 //updatePost({
-//id: 3442,
+//id: 3689,
 //title: "another post updated",
 //body: "oh yes updated"
-// })
+ //})
 
 
-//removePost(3443)
+//removePost(3688)
 //post.getPost()
-//post.getPosts().then(console.log);
+getPosts().then(console.log);
 //post.createPost()
 //post.removePost()
 //post.updatePost()
