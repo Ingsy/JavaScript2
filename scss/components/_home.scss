@@ -30,6 +30,7 @@
 }
 
 .card {
+  max-width: $maw-300px;
   min-width: $miw-300px;
   min-height: $mih-120px;
   border-radius: $br-30px;
