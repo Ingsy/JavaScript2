@@ -35,20 +35,9 @@ if (path === "/login.html") {
 //body: " yes updated"
 //})
 
-//removePost(3688)
+//removePost(3739);
 //post.getPost()
 //getPosts().then(console.log);
 //createPost().then(console.log);
 //post.removePost()
 //post.updatePost()
-
-//createPost({
-//title: "example",
-//body: "example"
-//})
-
-//updatePost({
-//id: 1,
-//title: "example",
-//body: "example"
-//})
