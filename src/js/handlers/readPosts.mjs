@@ -21,7 +21,7 @@ for (let i = 0; i <post.length; i++) {
                       </div>
                         <div class="card-body">
                         <div class="text-center">
-                          <p class="card-text text-start mx-5">
+                          <p class="card-text text-center mx-5">
                             ${post[i].title}
                           </p>
                           <img src="${post[i].media}" class="rounded card-img" alt="..."></img>
@@ -52,7 +52,7 @@ for (let i = 0; i <post.length; i++) {
                     />
                   </div>
                     <div class="card-body">
-                      <p class="card-text text-start mx-5">
+                      <p class="card-text text-center mx-5">
                         ${post[i].title}
                       </p> 
                       <hr class="mb-0"><p class="text-start">
@@ -71,15 +71,4 @@ for (let i = 0; i <post.length; i++) {
 }
 }
 
-   // if (form){
-    //    form.addEventListener("submit", (event) => {
-    //        event.preventDefault()
-     //       const form = event.target;
-     //       const formData = new FormData(form); 
-     //       const post = Object.fromEntries(formData.entries())
-    
-            //Send it to the API 
-      //      getPost(post)
-     //   }) 
-   // }
-//}
+  

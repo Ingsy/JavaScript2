@@ -6,6 +6,8 @@ import { getPosts } from "./js/posts/read.mjs";
 import { createPost } from "./js/posts/create.mjs";
 import { removePost } from "./js/posts/delete.mjs";
 import { updatePost } from "./js/posts/update.mjs";
+import { filterPosts } from "./js/posts/filter.mjs";
+import { displaysearchPosts } from "./js/posts/search.mjs";
 
 const path = location.pathname;
 
@@ -19,7 +21,9 @@ if (path === "/login.html") {
   listeners.setUpdatePostFormListener();
 } else if (path === "/index.html") {
   listeners.PostFeed();
-}
+} else if (path === "/index.html") {
+  displaysearchPosts();
+} 
 
 //router();
 
