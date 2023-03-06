@@ -1,5 +1,7 @@
 import {API_SOCIAL_URL} from "../constants.mjs";
 
+
+
 const action = "/auth/register";
 const method = "post";
 
@@ -17,5 +19,9 @@ const response = await fetch(registerURL, {
 
 const result = await response.json()
 alert("You are now registered")
+window.location.href = "/login.html"
 return result
 }
+
+
+  

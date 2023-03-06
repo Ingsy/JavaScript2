@@ -25,5 +25,4 @@ export async function createPost(postData) {
   console.log(post);
 
   alert("congratz, you posted something!")
-  window.location.href = "/index.html"
 }

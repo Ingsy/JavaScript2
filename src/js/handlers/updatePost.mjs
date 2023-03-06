@@ -14,6 +14,7 @@ export function setUpdatePostFormListener() {
             const formData = new FormData(form); 
             const post = Object.fromEntries(formData.entries())
             post.id = id;  
+            post.tags = post.tags.split(",");
     
             //Send it to the API 
             updatePost(post)
@@ -21,3 +22,4 @@ export function setUpdatePostFormListener() {
     }
 }
 
+//querystring missing ?id=429

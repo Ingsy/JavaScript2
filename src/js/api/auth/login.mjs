@@ -16,9 +16,10 @@ const response = await fetch(loginURL, {
     body,
 });
 
-//console.log(result);
+
 const result = await response.json();
 localStorage.setItem("token", result.accessToken);
+console.log(result);
 
 //const token = localstorage.setItem("token");
 
@@ -29,5 +30,6 @@ storage.save("token", result.accessToken);
 storage.save("profile", user);
 
 alert("You are now logged in");
+window.location.href = "/profile.html"
 }
 
