@@ -13,5 +13,7 @@ const deletePostURL = `${API_SOCIAL_URL}${action}/${id}`;
     const response = await authFetch(deletePostURL, {
         method
     })
+    alert("post deleted")
     return await response.json();
+
 }

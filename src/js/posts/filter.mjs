@@ -6,14 +6,13 @@ import {
   postsWithoutImgbtn,
   allPostsbtn } from "../api/constants.mjs";
 
-  
 
 
-export function filterPosts (post) {
+export async function filteredPosts (post) {
+
   postsWithImgbtn.innerHTML = `<a class="dropdown-item posts-img">Posts with images</a>`;
   postsWithoutImgbtn.innerHTML = `<a class="dropdown-item posts-no-img">Posts without images</a>`;
   allPostsbtn.innerHTML = `<a class="dropdown-item all-posts">Most recent Posts</a>`;
-
   if (filterParam === "posts_img") {
     postContainer.innerHTML = ""; 
     for (let i =0; i < post.length; i++){
@@ -51,7 +50,7 @@ export function filterPosts (post) {
         }
       }
     }
-     if (filterParam === "no_img") {
+     if (filterParam === "posts-no-img") {
          postContainer.innerHTML ="";
          for (let i = 0; i < post.length; i++) {
            if (!post[i].media) {

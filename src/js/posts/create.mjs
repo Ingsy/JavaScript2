@@ -23,4 +23,7 @@ export async function createPost(postData) {
   const post = await response.json();
 
   console.log(post);
+
+  alert("congratz, you posted something!")
+  window.location.href = "/index.html"
 }

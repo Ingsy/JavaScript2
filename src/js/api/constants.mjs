@@ -3,12 +3,14 @@ export const API_BASE_URL = "/api/v1";
 export const API_SOCIAL_BASE = "/social";
 export const API_SOCIAL_URL = `${API_HOST_URL}${API_BASE_URL}${API_SOCIAL_BASE}`;
 
+
+
 export const params = new URLSearchParams(window.location.search);
 export const postID = params.get("postID");
 export const postIdUrl = `${API_SOCIAL_URL}posts/${postID}?_author=true`;
-export const filterParam = params.get("filter");
-
 export const searchForm = document.querySelector("#searchform")
+
+export const filterParam = params.get("filter");
 //buttons 
 
 export const postsWithImgbtn = document.querySelector(".posts-img");

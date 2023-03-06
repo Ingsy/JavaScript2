@@ -1,4 +1,6 @@
-import { searchForm } from "../api/constants.mjs";
+import {
+  searchForm
+} from "../api/constants.mjs";
 
 export function searchPosts(posts){
   searchForm.onkeyup = function (event) {
