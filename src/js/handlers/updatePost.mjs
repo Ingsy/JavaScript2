@@ -16,10 +16,10 @@ export function setUpdatePostFormListener() {
             post.id = id;  
             post.tags = post.tags.split(",");
     
-            //Send it to the API 
+             
             updatePost(post)
+            alert("The post is now updated!")
         }) 
     }
 }
 
-//querystring missing ?id=429

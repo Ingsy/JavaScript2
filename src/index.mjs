@@ -1,5 +1,6 @@
 import * as listeners from "./js/handlers/index.mjs";
 import { updatePost } from "./js/posts/update.mjs";
+import { removePost } from "./js/posts/delete.mjs";
 
 const path = location.pathname;
 
@@ -10,7 +11,6 @@ if (path === "/login.html") {
 } else if (path === "/profile.html") {
   listeners.setCreatePostFormListener();
 } else if (path === "/editPost.html") {
-  console.log("setlistener");
   listeners.setUpdatePostFormListener();
 } else if (path === "/index.html") {
   listeners.PostFeed();
@@ -20,7 +20,7 @@ if (path === "/login.html") {
 
 
 
-//removePost(3739);
+//removePost(4227);
 //post.getPost()
 //getPosts().then(console.log);
 //createPost().then(console.log);

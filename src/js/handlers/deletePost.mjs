@@ -11,7 +11,7 @@ getPosts(postIdUrl).then(function () {
       console.log(delBtnId.id);
       const confirmDelete = "please comfirm to delete this post";
       if (confirm(confirmDelete)) {
-        removePost(4216);
+        removePost(post.id);
       }
     });
   });

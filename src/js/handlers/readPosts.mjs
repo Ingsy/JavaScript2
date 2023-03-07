@@ -43,7 +43,7 @@ function renderPosts(posts){
                       <i class="fa fa-thumbs-up"></i>
                       <i class="fa fa-comment"></i>
                       <button class="mb-2 edit-button btn btn-contact-posts"><a href="/editPost.html?id=${posts[i].id}">edit</a></button>
-                      <button class="mb-2 del-button btn btn-contact-posts">delete</button>
+                      <button class="mb-2 del-button btn btn-contact-posts"><a href="/index.html?id=${posts[i].id}">delete</a></button>
                     </div>
                     </div>
                   </div>
