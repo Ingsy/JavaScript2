@@ -14,7 +14,6 @@ export function setRegisterFormListener(){
             const action = form.action; 
             const method = form.method;
     
-            //Send it to the API 
             register(profile)
         }) 
     }

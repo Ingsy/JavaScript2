@@ -13,7 +13,6 @@ export function setLoginFormListener(){
             const action = form.action; 
             const method = form.method;
     
-            //Send it to the API 
             login(profile)
         }); 
     }

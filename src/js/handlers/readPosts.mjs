@@ -1,8 +1,6 @@
-import { postIdUrl } from "../api/constants.mjs";
-import { API_BASE_URL } from "../api/constants.mjs";
+
 import { getPosts } from "../posts/read.mjs";
 import { 
-  filterParam,
   postsWithImgbtn,
   postsWithoutImgbtn,
   allPostsbtn,
@@ -18,7 +16,7 @@ function renderPosts(posts){
     <div class="col mt-4">
         <div class="card">
             <div class="contact-show">
-                <h4>ID:${posts[i].id}</h4>
+                <h4>${posts[i].id}</h4>
                 <img
                       src="${posts[i].avatar}"
                       class="card-img-top text-end"
@@ -29,6 +27,9 @@ function renderPosts(posts){
                   <div class="text-center">
                     <p class="card-text text-center mx-5">
                         ${posts[i].title}
+                    </p>
+                    <p class="card-text text-center mx-5">
+                        ${posts[i].body}
                     </p>
                     `;
                     if (posts[i].media) {
@@ -43,7 +44,7 @@ function renderPosts(posts){
                       <i class="fa fa-thumbs-up"></i>
                       <i class="fa fa-comment"></i>
                       <button class="mb-2 edit-button btn btn-contact-posts"><a href="/editPost.html?id=${posts[i].id}">edit</a></button>
-                      <button class="mb-2 del-button btn btn-contact-posts"><a href="/index.html?id=${posts[i].id}">delete</a></button>
+                      <button class="mb-2 del-button btn btn-contact-posts"><a class="del-button href="/index.html?id=${posts[i].id}">delete</a></button>
                     </div>
                     </div>
                   </div>
@@ -51,6 +52,12 @@ function renderPosts(posts){
       postContainer.innerHTML += postHtml;
   }
 }
+
+/**
+ * This function will 
+ */
+//filter and search
+//remember JsDocs 
 
 export async function PostFeed(){
     const posts = await getPosts();
