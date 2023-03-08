@@ -45,7 +45,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/login.html">login</a></li>
-                  <li><a class="dropdown-item" id="logout" href="#">log out</a></li>
+                  <li><a class="dropdown-item" id="logout" href="/login.html">log out</a></li>
                 </ul>
               </li>
             </ul>
@@ -85,135 +85,18 @@
                     Friends
                   </a>
                 </div>
-                  <div class="collapse" id="Contacts">
-                    <ul class="list-group text-start">
-                      <div class="col-8">
-                      <li class="list-group-item">
-                        <div>
-                          <div class="contact-show">
-                            <a class="btn btn-contacts mt-4" data-bs-toggle="collapse" href="#collapseMonica" role="button" aria-expanded="false" aria-controls="collapseExample">
-                              Monica Geller
-                            </a>
-                            <img src="/images/Monica.jpg" class="card-img-top text-end" alt="Monica`s profile-photo">
-                          </div>
-                          <div class="collapse" id="collapseMonica">
-                            <div class="text-center mb-2">
-                              <hr>
-                              <a href="#" class="btn btn-contact-posts"> Monica`s post</a>
-                              <a href="#" class="btn btn-contact-posts"> Monica`s profile</a>
-                              <hr>
-                              <label for="writeOnWall" class="form-label"></label>
-                              <p class="card-text text-start">
-                                <textarea name="NewPost" id="writeOnWallMonica" cols="10" rows="2" placeholder="write on Monica`s wall..."></textarea>
-                                <a href="#" class="mt-1 btn btn-post">Post message</a>
-                               </p>
-                            </div>
-                          </div>
-                          </div></li>
-                          <li class="list-group-item">
-                            <div>
-                              <div class="contact-show">
-                                <a class="btn btn-contacts mt-4" data-bs-toggle="collapse" href="#collapseChandler" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                  Chandler Bing
-                                </a>
-                                <img src="/images/bing.jpg" class="card-img-top text-end" alt="Chandler`s profile-photo">
-                              </div>
-                              <div class="collapse" id="collapseChandler">
-                                <div class="text-center mb-2">
-                                  <hr>
-                                  <a href="#" class="btn btn-contact-posts"> Chandler`s post</a>
-                                  <a href="#" class="btn btn-contact-posts"> Chandler`s profile</a>
-                                  <hr>
-                                  <label for="writeOnWall" class="form-label"></label>
-                                  <textarea class="form-control" id="writeOnWallChandler" rows="2" placeholder="write on Chandler`s wall..."></textarea>
-                                </div>
-                              </div>
-                              </div></li>
-                              <li class="list-group-item">
-                                <div>
-                                  <div class="contact-show">
-                                    <a class="btn btn-contacts mt-4" data-bs-toggle="collapse" href="#collapseJoey" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                      Joey Tribbiani
-                                    </a>
-                                    <img src="/images/Matt-LeBlanc.jpg" class="card-img-top text-end" alt="Joey`s profile-photo">
-                                  </div>
-                                  <div class="collapse" id="collapseJoey">
-                                    <div class="text-center mb-2">
-                                      <a href="#" class="btn btn-contact-posts"> Joey`s post</a>
-                                      <label for="writeOnWall" class="form-label"></label>
-                                      <textarea class="form-control" id="writeOnWallJoey" rows="2" placeholder="write on Joey`s wall..."></textarea>
-                                    </div>
-                                  </div>
-                                  </div></li>
-                                  <li class="list-group-item">
-                                    <div>
-                                      <div class="contact-show">
-                                        <a class="btn btn-contacts mt-4" data-bs-toggle="collapse" href="#collapseRachel" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                          Rachel Green
-                                        </a>
-                                        <img src="/images/Rachel.jpg" class="card-img-top text-end" alt="Rachel`s profile-photo">
-                                      </div>
-                                      <div class="collapse" id="collapseRachel">
-                                        <div class="text-center mb-2">
-                                          <a href="#" class="btn btn-contact-posts"> Rachel`s post</a>
-                                          <label for="writeOnWall" class="form-label"></label>
-                                          <textarea class="form-control" id="writeOnWallRachel" rows="2" placeholder="write on Rachel`s wall..."></textarea>
-                                        </div>
-                                      </div>
-                                      </div></li>
-                                      <li class="list-group-item">
-                                        <div>
-                                          <div class="contact-show">
-                                            <a class="btn btn-contacts mt-4" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                              Phoebe Buffet
-                                            </a>
-                                            <img src="/images/phoebe.jpg" class="card-img-top text-end" alt="phoebe`s profile-photo">
-                                          </div>
-                                          <div class="collapse" id="collapseExample">
-                                            <div class="text-center mb-2">
-                                            <a href="#" class="btn btn-contact-posts"> Phoebe`s post</a>
-                                              <label for="writeOnWall" class="form-label"></label>
-                                              <textarea class="form-control" id="writeOnWallPhoebe" rows="2" placeholder="write on Phoebe`s wall..."></textarea>
-                                            </div>
-                                          </div>
-                                          </div></li>
-                    </div>
-                    </ul>
-                  </div>
                   <div>
                     <i class="fa fa-images"></i>
                   <a class="btn btn-contacts" data-bs-toggle="collapse" href="#Photos" role="button" aria-expanded="false" aria-controls="Photos">
                     Photos
                   </a>
                 </div>
-                  <div class="collapse" id="Photos">
-                    <ul class="list-group text-start">
-                      <div class="col-8">
-                      <li class="list-group-item">
-                        <img src="/images/ross-4.jpg" class="img-ross img-fluid" alt="..."></li>
-                          <li class="list-group-item">
-                            <img src="/images/ross-2.jpg" class="img-ross img-fluid" alt="..."></li>
-                            <li class="list-group-item">
-                              <img src="/images/ross-3.jpg" class="img-ross img-fluid" alt="..."></li>
-                    </div>
-                    </ul>
-                  </div>
+                
                   <div>
                   <i class="fa fa-star"></i>
                   <a class="btn btn-contacts" data-bs-toggle="collapse" href="#Groups" role="button" aria-expanded="false" aria-controls="Groups">
                     Groups
                   </a>
-                </div>
-                <div class="collapse" id="Groups">
-                  <ul class="list-group text-start">
-                    <div class="col-8">
-                    <li class="list-group-item">Monkey lovers</li>
-                    <li class="list-group-item">Science</li>
-                    <li class="list-group-item">Rachel Green</li>
-                    <li class="list-group-item">I like Coffie</li>
-                    <li class="list-group-item">Movies</li>
-                  </div>
-                  </ul>
                 </div>
                 <div>
                   <i class="fa fa-comment"></i>

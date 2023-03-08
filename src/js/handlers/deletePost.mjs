@@ -10,7 +10,8 @@ export async function deletePost (){
 
       if (confirm(delConfirm)) {
         removePost(delBtn[i].id);
-        console.log("works?");
+        
+        console.log("works?", delBtn[i]);
         window.location.reload();
       }
     });

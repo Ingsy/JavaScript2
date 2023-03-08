@@ -46,7 +46,11 @@ function renderPosts(posts){
                       <i class="fa fa-thumbs-up"></i>
                       <i class="fa fa-comment"></i>
                       <button class="mb-2 edit-button btn btn-contact-posts"><a href="/editPost.html?id=${posts[i].id}">edit</a></button>
-                      <button class="mb-2 del-button btn btn-contact-posts">${posts[i].id}="delete"</button>
+                      `;
+                      if (posts) {
+                        postHtml += `<button class="mb-2 del-button btn btn-contact-posts" id="${posts[i].id}">delete</button>`;
+                      }
+                      postHtml += `
                     </div>
                     </div>
                   </div>
@@ -60,29 +64,30 @@ function renderPosts(posts){
 export async function PostFeed(){
     const posts = await getPosts();
     postsWithImgbtn.addEventListener("click", function () {
-      console.log("With images");
       const filtered = posts.filter(post=>post.media);
       renderPosts(filtered);
     });
 
     postsWithoutImgbtn.addEventListener("click", function () {
-      console.log("Without images");
       const filtered = posts.filter(post=>!post.media);
       renderPosts(filtered);
     });
 
     allPostsbtn.addEventListener("click", async function () {
-      console.log("All posts");
       renderPosts(posts);
     });
 
     searchForm.onkeyup = function (event) {
       const searchValue = event.target.value.trim().toLowerCase();
-      const filteredSearch = posts.filter(function (posts){
-        if (posts.title.toLowerCase().includes(searchValue)){
+      const filteredSearch = posts.filter(function (post){
+        if (post.title.toLowerCase().includes(searchValue)){
           return true;
         }
-        if (posts.body.toLowerCase().includes(searchValue)){
+        if (post.body.toLowerCase().includes(searchValue)){
+          return true;
+        }
+        console.log(post);
+        if (post.id.toString().includes(searchValue)){
           return true;
         }
         return false;
