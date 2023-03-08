@@ -45,7 +45,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/login.html">login</a></li>
-                  <li><a class="dropdown-item" href="#">log out</a></li>
+                  <li><a class="dropdown-item" id="logout" href="#">log out</a></li>
                 </ul>
               </li>
             </ul>
@@ -60,24 +60,29 @@
             <h2>My Profile</h2>
             <div class="row">
               <div class="col mb-4 mt-4">
+                <form id="editProfile">
                 <div class="card">
                   <div class="contact-show">
                     <div class="pName">Ross Geller</div>
-                  <img src="/images/David-Schwimmer-Net-worth.jpg" class="card-img-profile mt-2" alt="profile-photo">
+                  <img src="https://icon-library.com/icon/friend-icon-4.html.html>Friend Icon # 385967" class="card-img-profile mt-2" alt="profile-photo">
                 </div>
                 <hr class="mx-4 my-4">
                   <div class="card-body mx-4 text-start">
-                  <h3>Date of birth: October 18, 1967</h3>
-                  <h3>Number of episodes: 236</h3>
-                  <h3>Last appearance: The Last One, Part 2</h3>
+                  <h3>Date of birth:</h3>
+                  <h3>Some information about yourself</h3>
+                  <h3>More information...</h3>
+                  <button class="btn btn-contact-posts">Edit Profile</button>
                 </div>
+                
                 </div>
+                
+              </form>
               </div>
               <div class="col-sm-12 col-md-12 col-lg-12 mt-4 mb-4">
                 <div class="mt-4">
                   <i class="fa fa-users"></i>
                   <a class="btn btn-contacts" data-bs-toggle="collapse" href="#Contacts" role="button" aria-expanded="false" aria-controls="Contacts">
-                    Contacts
+                    Friends
                   </a>
                 </div>
                   <div class="collapse" id="Contacts">
@@ -86,17 +91,20 @@
                       <li class="list-group-item">
                         <div>
                           <div class="contact-show">
-                            <a class="btn btn-contacts" data-bs-toggle="collapse" href="#collapseMonica" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <a class="btn btn-contacts mt-4" data-bs-toggle="collapse" href="#collapseMonica" role="button" aria-expanded="false" aria-controls="collapseExample">
                               Monica Geller
                             </a>
                             <img src="/images/Monica.jpg" class="card-img-top text-end" alt="Monica`s profile-photo">
                           </div>
                           <div class="collapse" id="collapseMonica">
                             <div class="text-center mb-2">
+                              <hr>
                               <a href="#" class="btn btn-contact-posts"> Monica`s post</a>
+                              <a href="#" class="btn btn-contact-posts"> Monica`s profile</a>
+                              <hr>
                               <label for="writeOnWall" class="form-label"></label>
                               <p class="card-text text-start">
-                                <textarea name="NewPost" id="writeOnWall" cols="10" rows="2" placeholder="write on Monica`s wall..."></textarea>
+                                <textarea name="NewPost" id="writeOnWallMonica" cols="10" rows="2" placeholder="write on Monica`s wall..."></textarea>
                                 <a href="#" class="mt-1 btn btn-post">Post message</a>
                                </p>
                             </div>
@@ -105,23 +113,26 @@
                           <li class="list-group-item">
                             <div>
                               <div class="contact-show">
-                                <a class="btn btn-contacts" data-bs-toggle="collapse" href="#collapseChandler" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <a class="btn btn-contacts mt-4" data-bs-toggle="collapse" href="#collapseChandler" role="button" aria-expanded="false" aria-controls="collapseExample">
                                   Chandler Bing
                                 </a>
                                 <img src="/images/bing.jpg" class="card-img-top text-end" alt="Chandler`s profile-photo">
                               </div>
                               <div class="collapse" id="collapseChandler">
                                 <div class="text-center mb-2">
+                                  <hr>
                                   <a href="#" class="btn btn-contact-posts"> Chandler`s post</a>
+                                  <a href="#" class="btn btn-contact-posts"> Chandler`s profile</a>
+                                  <hr>
                                   <label for="writeOnWall" class="form-label"></label>
-                                  <textarea class="form-control" id="writeOnWall" rows="2" placeholder="write on Chandler`s wall..."></textarea>
+                                  <textarea class="form-control" id="writeOnWallChandler" rows="2" placeholder="write on Chandler`s wall..."></textarea>
                                 </div>
                               </div>
                               </div></li>
                               <li class="list-group-item">
                                 <div>
                                   <div class="contact-show">
-                                    <a class="btn btn-contacts" data-bs-toggle="collapse" href="#collapseJoey" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <a class="btn btn-contacts mt-4" data-bs-toggle="collapse" href="#collapseJoey" role="button" aria-expanded="false" aria-controls="collapseExample">
                                       Joey Tribbiani
                                     </a>
                                     <img src="/images/Matt-LeBlanc.jpg" class="card-img-top text-end" alt="Joey`s profile-photo">
@@ -130,14 +141,14 @@
                                     <div class="text-center mb-2">
                                       <a href="#" class="btn btn-contact-posts"> Joey`s post</a>
                                       <label for="writeOnWall" class="form-label"></label>
-                                      <textarea class="form-control" id="writeOnWall" rows="2" placeholder="write on Joey`s wall..."></textarea>
+                                      <textarea class="form-control" id="writeOnWallJoey" rows="2" placeholder="write on Joey`s wall..."></textarea>
                                     </div>
                                   </div>
                                   </div></li>
                                   <li class="list-group-item">
                                     <div>
                                       <div class="contact-show">
-                                        <a class="btn btn-contacts" data-bs-toggle="collapse" href="#collapseRachel" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        <a class="btn btn-contacts mt-4" data-bs-toggle="collapse" href="#collapseRachel" role="button" aria-expanded="false" aria-controls="collapseExample">
                                           Rachel Green
                                         </a>
                                         <img src="/images/Rachel.jpg" class="card-img-top text-end" alt="Rachel`s profile-photo">
@@ -146,14 +157,14 @@
                                         <div class="text-center mb-2">
                                           <a href="#" class="btn btn-contact-posts"> Rachel`s post</a>
                                           <label for="writeOnWall" class="form-label"></label>
-                                          <textarea class="form-control" id="writeOnWall" rows="2" placeholder="write on Rachel`s wall..."></textarea>
+                                          <textarea class="form-control" id="writeOnWallRachel" rows="2" placeholder="write on Rachel`s wall..."></textarea>
                                         </div>
                                       </div>
                                       </div></li>
                                       <li class="list-group-item">
                                         <div>
                                           <div class="contact-show">
-                                            <a class="btn btn-contacts" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            <a class="btn btn-contacts mt-4" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                               Phoebe Buffet
                                             </a>
                                             <img src="/images/phoebe.jpg" class="card-img-top text-end" alt="phoebe`s profile-photo">
@@ -162,7 +173,7 @@
                                             <div class="text-center mb-2">
                                             <a href="#" class="btn btn-contact-posts"> Phoebe`s post</a>
                                               <label for="writeOnWall" class="form-label"></label>
-                                              <textarea class="form-control" id="writeOnWall" rows="2" placeholder="write on Phoebe`s wall..."></textarea>
+                                              <textarea class="form-control" id="writeOnWallPhoebe" rows="2" placeholder="write on Phoebe`s wall..."></textarea>
                                             </div>
                                           </div>
                                           </div></li>
@@ -204,98 +215,53 @@
                   </div>
                   </ul>
                 </div>
+                <div>
+                  <i class="fa fa-comment"></i>
+                  <a class="btn btn-contacts"  href="/index.html" role="button">
+                    Newsfeed
+                  </a>
+                </div>
               </div>
           </div>
               </div>
               <div class="col-md-6 col-lg-6 mt-4">
-                <h2>My Posts</h2>
+                <h2>Hello World</h2>
                 <div class="row">
                 <div class="col mb-4 mt-4">
-                <div class="card">
-                  <div class="contact-show m-1">
-                  <img
-                    src="/images/David-Schwimmer-Net-worth.jpg"
-                    class="card-img-top"
-                    alt="profile-photo"
-                  />
-                  <h4>
-                    Whats on your mind today?
-                  </h4>
-                </div>
-                <hr class="mx-4 my-4 mt-1 mb-0">
-                  <div class="card-body text-center">
-                    <p class="card-text">
-                     <textarea name="NewPost" id="" cols="30" rows="3" placeholder="write a new post..."></textarea>
-                    </p>
-                      <a href="#" class="btn btn-post">Post message</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col mb-4 mt-4">
-                <div class="card">
-                  <img
-                    src="/images/David-Schwimmer-Net-worth.jpg"
-                    class="card-img-top m-1"
-                    alt="profile-photo"
-                  />
-                  <div class="card-body">
-                    <p class="card-text text-center mb-4 mx-5">
-                      I`m the holiday armadillo?
-                    </p>
-  <hr class="mb-0"><p class="text-start">
-    <em>16.02.2023</em>
-  </p></div>
-  <div class="contact-show">
-    <i class="fa fa-thumbs-up"></i>
-    <i class="fa fa-comment"></i>
-    <i class="fa fa-share"></i>
-  </div>
-                    </div>
-                  </div>
-                <div class="col mb-4">
-                  <div class="card">
-                    <img
-                      src="/images/David-Schwimmer-Net-worth.jpg"
-                      class="card-img-top m-1"
-                      alt="profile-photo"
-                    />
-                    <div class="card-body">
-                      <p class="card-text text-center mb-4 mx-5">
-                        Happy New Year
-                      </p>
-                      <hr class="mb-0"><p class="text-start">
-                        <em>01.01.2023</em>
-                      </p></div>
-                      <div class="contact-show">
-                        <i class="fa fa-thumbs-up"></i>
-                        <i class="fa fa-comment"></i>
-                        <i class="fa fa-share"></i>
-                      </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col mb-4">
-                    <div class="card">
+                <div class="card"> 
+
+                    <div class="contact-show m-1">
                       <img
                         src="/images/David-Schwimmer-Net-worth.jpg"
                         class="card-img-top"
                         alt="profile-photo"
                       />
-                      <div class="line-2 mt-2 mx-4"></div>
-                      <div class="card-body">
-                        <p class="card-text text-center mb-4 mx-5">
-                          wooppediwoo
-                        </p>
-                        <hr class="mb-0"><p class="text-start">
-                          <em>16.05.2023</em>
-                        </p></div>
-                        <div class="contact-show">
-                          <i class="fa fa-thumbs-up"></i>
-                          <i class="fa fa-comment"></i>
-                          <i class="fa fa-share"></i>
-                        </div>
-                        </div>
+                      <h4>
+                        Whats on your mind today?
+                      </h4>
+                    </div>
+                    <hr class="mx-4 my-4 mt-1 mb-2">
+                    <form id="createPost">
+                      <div class="mx-4">
+                        <label for="" class="form-label"></label>
+                        <input type="text" name="title" class="form-control" placeholder="Title" required>
                       </div>
+                      <div class="mx-4">
+                        <label for="" class="form-label"></label>
+                        <textarea type="text" name="body" class="form-control" placeholder="body" required></textarea>
+                      </div>
+                      <div class="mx-4">
+                        <label for="" class="form-label"></label>
+                        <input type="text" name="tags" class="form-control" placeholder="tags">
+                      </div>
+                      <div class="mx-4 mb-3">
+                        <label for="" class="form-label"></label>
+                        <input type="url" name="media" class="form-control" placeholder="media">
+                      </div>
+                      <button class="btn btn-secondary mb-4">create Post</button>
+                    </form>
+                </div>
+                  </div>
                     </div>
               </div>
             </div>
@@ -320,5 +286,8 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script src="/src/js/handlers/index.mjs" type="module"></script>
+    <script src="/src/js/posts/index.mjs" type="module"></script>
+    <script src="/src/index.mjs" type="module"></script>
   </body>
 </html>
