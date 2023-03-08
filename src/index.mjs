@@ -1,6 +1,7 @@
 import * as listeners from "./js/handlers/index.mjs";
 import { updatePost } from "./js/posts/update.mjs";
 import { removePost } from "./js/posts/delete.mjs";
+import { deletePost } from "./js/handlers/deletePost.mjs";
 
 
 const path = location.pathname;
@@ -22,7 +23,7 @@ if (path === "/login.html") {
 
 
 
-//removePost(4374);
+//removePost(4379);
 //post.getPost()
 //getPosts().then(console.log);
 //createPost().then(console.log);

@@ -55,6 +55,7 @@ function renderPosts(posts){
   }
 }
 
+//function search -feed -filter
 
 export async function PostFeed(){
     const posts = await getPosts();
@@ -90,7 +91,6 @@ export async function PostFeed(){
       if(filteredSearch.length === 0){
         alert("No posts found");
       }
-      //const filteredSearch = posts.filter(post=>post.title.toLowerCase().includes(searchValue));
     };
 }
 
