@@ -2,6 +2,7 @@ import * as listeners from "./js/handlers/index.mjs";
 import { setLogOut } from "./js/api/auth/logout.mjs";
 import { updatePost } from "./js/posts/update.mjs";
 import { removePost } from "./js/posts/delete.mjs";
+
 import { deletePost } from "./js/handlers/deletePost.mjs";
 import * as storage from "./js/storage/index.mjs";
 
@@ -28,14 +29,7 @@ if (path === "/login.html") {
   listeners.PostFeed();
   listeners.AllPosts();
 
+
 }
-//router();
 
 
-
-//removePost(4379);
-//post.getPost()
-//getPosts().then(console.log);
-//createPost().then(console.log);
-//post.removePost()
-//post.updatePost()

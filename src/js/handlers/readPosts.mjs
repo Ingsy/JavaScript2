@@ -1,12 +1,22 @@
 
+
+import { getPosts } from "../posts/read.mjs";
+
+
+import { API_BASE_URL } from "../api/constants.mjs";
 import { getPosts } from "../posts/read.mjs";
 import { 
+  filterParam,
+  myPosts,
+  postIdUrl,
   postsWithImgbtn,
   postsWithoutImgbtn,
   allPostsbtn,
   searchForm } from "../api/constants.mjs";
 
+
 import { deletePost } from "./deletePost.mjs";
+
 
 
 function renderPosts(posts){
@@ -46,11 +56,17 @@ function renderPosts(posts){
                       <i class="fa fa-thumbs-up"></i>
                       <i class="fa fa-comment"></i>
                       <button class="mb-2 edit-button btn btn-contact-posts"><a href="/editPost.html?id=${posts[i].id}">edit</a></button>
+
                       `;
                       if (posts) {
                         postHtml += `<button class="mb-2 del-button btn btn-contact-posts" id="${posts[i].id}">delete</button>`;
                       }
                       postHtml += `
+
+ 
+
+                      <button class="mb-2 del-button btn btn-contact-posts"><a href="/index.html?id=${posts[i].id}">delete</a></button>
+
                     </div>
                     </div>
                   </div>
@@ -59,7 +75,9 @@ function renderPosts(posts){
   }
 }
 
+
 //function search -feed -filter
+
 
 export async function PostFeed(){
     const posts = await getPosts();
@@ -96,13 +114,20 @@ export async function PostFeed(){
       if(filteredSearch.length === 0){
         alert("No posts found");
       }
+
+
+      //const filteredSearch = posts.filter(post=>post.title.toLowerCase().includes(searchValue));
+
     };
 }
 
 export async function AllPosts(){
   let posts = await getPosts();
   renderPosts(posts);
+
   deletePost();
 }
+
+
 
 
