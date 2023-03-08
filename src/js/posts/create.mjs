@@ -5,10 +5,18 @@ import { load } from "../storage/index.mjs";
 const action = "/posts";
 const method = "post";
 
+
+/**
+ * This async function sends an API "POST" request.
+ * @param postData
+ * * @param {string} createPostURL - The API + Method: this url sends a "POST" request
+ * * @param {string} method - The HTTP request method "POST"
+ */
+
 export async function createPost(postData) {
   const createPostURL = API_SOCIAL_URL + action;
   const token = load("token");
-  //const tagsArray = postData.tags.split(",");
+  const tagsArray = postData.tags.split(",");
 
   const response = await authFetch(createPostURL, {
     method,

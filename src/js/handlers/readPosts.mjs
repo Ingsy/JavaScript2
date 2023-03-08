@@ -6,6 +6,8 @@ import {
   allPostsbtn,
   searchForm } from "../api/constants.mjs";
 
+import { deletePost } from "./deletePost.mjs";
+
 
 function renderPosts(posts){
   const postContainer = document.querySelector("#newsFeed");
@@ -44,7 +46,7 @@ function renderPosts(posts){
                       <i class="fa fa-thumbs-up"></i>
                       <i class="fa fa-comment"></i>
                       <button class="mb-2 edit-button btn btn-contact-posts"><a href="/editPost.html?id=${posts[i].id}">edit</a></button>
-                      <button class="mb-2 del-button btn btn-contact-posts"><a class="del-button href="/index.html?id=${posts[i].id}">delete</a></button>
+                      <button class="mb-2 del-button btn btn-contact-posts">${posts[i].id}="delete"</button>
                     </div>
                     </div>
                   </div>
@@ -53,11 +55,6 @@ function renderPosts(posts){
   }
 }
 
-/**
- * This function will 
- */
-//filter and search
-//remember JsDocs 
 
 export async function PostFeed(){
     const posts = await getPosts();
@@ -100,4 +97,7 @@ export async function PostFeed(){
 export async function AllPosts(){
   let posts = await getPosts();
   renderPosts(posts);
+  deletePost();
 }
+
+

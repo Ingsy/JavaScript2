@@ -2,6 +2,7 @@ import * as listeners from "./js/handlers/index.mjs";
 import { updatePost } from "./js/posts/update.mjs";
 import { removePost } from "./js/posts/delete.mjs";
 
+
 const path = location.pathname;
 
 if (path === "/login.html") {
@@ -15,12 +16,13 @@ if (path === "/login.html") {
 } else if (path === "/index.html") {
   listeners.PostFeed();
   listeners.AllPosts();
+  
 }
 //router();
 
 
 
-//removePost(4227);
+//removePost(4374);
 //post.getPost()
 //getPosts().then(console.log);
 //createPost().then(console.log);

@@ -9,6 +9,8 @@ export function setLogOut () {
         remove.addEventListeners("click", (event) =>{
         localStorage.clear();
         window.location.reload();
+
+        setLogOut();
     });
 }   
 }
