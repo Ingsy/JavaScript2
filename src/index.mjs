@@ -28,6 +28,7 @@ if (path === "/login.html") {
 } else if (path === "/index.html") {
   listeners.PostFeed();
   listeners.AllPosts();
+  listeners.deletePost();
 
 
 }

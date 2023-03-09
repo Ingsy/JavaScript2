@@ -1,25 +1,13 @@
-
-
 import { getPosts } from "../posts/read.mjs";
-
-
-import { API_BASE_URL } from "../api/constants.mjs";
-import { getPosts } from "../posts/read.mjs";
-import { 
-  filterParam,
-  myPosts,
-  postIdUrl,
+import {
   postsWithImgbtn,
   postsWithoutImgbtn,
   allPostsbtn,
-  searchForm } from "../api/constants.mjs";
-
-
+  searchForm
+} from "../api/constants.mjs";
 import { deletePost } from "./deletePost.mjs";
 
-
-
-function renderPosts(posts){
+function displayPosts(posts) {
   const postContainer = document.querySelector("#newsFeed");
   postContainer.innerHTML = "";
   for (let i = 0; i < posts.length; i++) {
@@ -44,10 +32,10 @@ function renderPosts(posts){
                         ${posts[i].body}
                     </p>
                     `;
-                    if (posts[i].media) {
-                      postHtml += `<img src="${posts[i].media}" class="rounded card-img" alt="..."></img>`;
-                    }
-                    postHtml += `
+    if (posts[i].media) {
+      postHtml += `<img src="${posts[i].media}" class="rounded card-img" alt="..."></img>`;
+    }
+    postHtml += `
                   </div>
                     <hr class="mb-0"><p class="text-start">
                     <em>${posts[i].created}</em>  
@@ -56,22 +44,12 @@ function renderPosts(posts){
                       <i class="fa fa-thumbs-up"></i>
                       <i class="fa fa-comment"></i>
                       <button class="mb-2 edit-button btn btn-contact-posts"><a href="/editPost.html?id=${posts[i].id}">edit</a></button>
-
-                      `;
-                      if (posts) {
-                        postHtml += `<button class="mb-2 del-button btn btn-contact-posts" id="${posts[i].id}">delete</button>`;
-                      }
-                      postHtml += `
-
- 
-
-                      <button class="mb-2 del-button btn btn-contact-posts"><a href="/index.html?id=${posts[i].id}">delete</a></button>
-
+                     <button class="mb-2 del-button btn btn-contact-posts" id="${posts[i].id}">delete</button>
                     </div>
                     </div>
                   </div>
       </div>`;
-      postContainer.innerHTML += postHtml;
+    postContainer.innerHTML += postHtml;
   }
 }
 
@@ -79,51 +57,51 @@ function renderPosts(posts){
 //function search -feed -filter
 
 
-export async function PostFeed(){
-    const posts = await getPosts();
-    postsWithImgbtn.addEventListener("click", function () {
-      const filtered = posts.filter(post=>post.media);
-      renderPosts(filtered);
-    });
+export async function PostFeed() {
+  const posts = await getPosts();
+  postsWithImgbtn.addEventListener("click", function () {
+    const filtered = posts.filter(post => post.media);
+    displayPosts(filtered);
+  });
 
-    postsWithoutImgbtn.addEventListener("click", function () {
-      const filtered = posts.filter(post=>!post.media);
-      renderPosts(filtered);
-    });
+  postsWithoutImgbtn.addEventListener("click", function () {
+    const filtered = posts.filter(post => !post.media);
+    displayPosts(filtered);
+  });
 
-    allPostsbtn.addEventListener("click", async function () {
-      renderPosts(posts);
-    });
+  allPostsbtn.addEventListener("click", async function () {
+    displayPosts(posts);
+  });
 
-    searchForm.onkeyup = function (event) {
-      const searchValue = event.target.value.trim().toLowerCase();
-      const filteredSearch = posts.filter(function (post){
-        if (post.title.toLowerCase().includes(searchValue)){
-          return true;
-        }
-        if (post.body.toLowerCase().includes(searchValue)){
-          return true;
-        }
-        console.log(post);
-        if (post.id.toString().includes(searchValue)){
-          return true;
-        }
-        return false;
-      });
-      renderPosts(filteredSearch);
-      if(filteredSearch.length === 0){
-        alert("No posts found");
+  searchForm.onkeyup = function (event) {
+    const searchValue = event.target.value.trim().toLowerCase();
+    const filteredSearch = posts.filter(function (post) {
+      if (post.title.toLowerCase().includes(searchValue)) {
+        return true;
       }
+      if (post.body.toLowerCase().includes(searchValue)) {
+        return true;
+      }
+      console.log(post);
+      if (post.id.toString().includes(searchValue)) {
+        return true;
+      }
+      return false;
+    });
+    displayPosts(filteredSearch);
+    if (filteredSearch.length === 0) {
+      alert("No posts found");
+    }
 
 
-      //const filteredSearch = posts.filter(post=>post.title.toLowerCase().includes(searchValue));
+    //const filteredSearch = posts.filter(post=>post.title.toLowerCase().includes(searchValue));
 
-    };
+  };
 }
 
-export async function AllPosts(){
+export async function AllPosts() {
   let posts = await getPosts();
-  renderPosts(posts);
+  displayPosts(posts);
 
   deletePost();
 }
