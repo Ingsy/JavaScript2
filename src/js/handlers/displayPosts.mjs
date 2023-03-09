@@ -93,9 +93,6 @@ export async function PostFeed() {
       alert("No posts found");
     }
 
-
-    //const filteredSearch = posts.filter(post=>post.title.toLowerCase().includes(searchValue));
-
   };
 }
 

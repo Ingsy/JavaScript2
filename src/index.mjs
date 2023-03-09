@@ -1,9 +1,5 @@
 import * as listeners from "./js/handlers/index.mjs";
 import { setLogOut } from "./js/api/auth/logout.mjs";
-import { updatePost } from "./js/posts/update.mjs";
-import { removePost } from "./js/posts/delete.mjs";
-
-import { deletePost } from "./js/handlers/deletePost.mjs";
 import * as storage from "./js/storage/index.mjs";
 
 
