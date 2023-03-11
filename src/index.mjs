@@ -25,6 +25,7 @@ if (path === "/login.html") {
   listeners.PostFeed();
   listeners.AllPosts();
   listeners.deletePost();
+  listeners.singlePost();
 
 
 }

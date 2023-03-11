@@ -41,8 +41,7 @@ function displayPosts(posts) {
                     <em>${posts[i].created}</em>  
                     </p>
                     <div class="contact-show">
-                      <i class="fa fa-thumbs-up"></i>
-                      <i class="fa fa-comment"></i>
+                    <button class="mb-2 see-Post btn btn-contact-posts" id="${posts[i].id}">see this Post</button>
                       <button class="mb-2 edit-button btn btn-contact-posts"><a href="/editPost.html?id=${posts[i].id}">edit</a></button>
                      <button class="mb-2 del-button btn btn-contact-posts" id="${posts[i].id}">delete</button>
                     </div>
@@ -55,7 +54,6 @@ function displayPosts(posts) {
 
 
 //function search -feed -filter
-
 
 export async function PostFeed() {
   const posts = await getPosts();
