@@ -11,8 +11,6 @@ export async function deletePost() {
 
       if (confirm(delConfirm)) {
         await removePost(delBtn[i].id);
-
-        console.log("works?", delBtn[i]);
         window.location.reload();
       }
     });
