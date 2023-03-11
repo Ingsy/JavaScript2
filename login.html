@@ -10,13 +10,20 @@
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="dist/css/styles.css" />
-    <script src="https://kit.fontawesome.com/b0782a38e3.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/b0782a38e3.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid navbar-color">
-          <a class="navbar-brand" href="#"><span class="navbar-brand1">Be</span><span class="navbar-brand2"><strong>Friend</strong></span><span class="navbar-brand1">Me</span></a>
+          <a class="navbar-brand" href="#"
+            ><span class="navbar-brand1">Be</span
+            ><span class="navbar-brand2"><strong>Friend</strong></span
+            ><span class="navbar-brand1">Me</span></a
+          >
           <button
             class="navbar-toggler"
             type="button"
@@ -37,35 +44,55 @@
                 <a class="nav-link" href="/profile.html">My Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/login.html"><strong>Login</strong></a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/login.html"
+                  ><strong>Login</strong></a
+                >
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <div class="container-fluid">
-        <div class="row ">
-            <div class="col-12 m-4">
-              <form id="loginForm">
+        <div class="row">
+          <div class="col-12 m-4">
+            <form id="loginForm">
               <div class="mb-4">
                 <label for="Username" class="form-label">E-mail</label>
-                <input type="email" name="email" required pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only @(stud.)noroff.no domains are allowed to register." class="form-control" id="Username">
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                  title="Only @(stud.)noroff.no domains are allowed to register."
+                  class="form-control"
+                  id="Username"
+                />
               </div>
               <div class="mb-4">
                 <label for="Password1" class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" id="Password1">
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="Password1"
+                />
               </div>
-              <button class="btn btn-secondary" href="/profile.html">Login</button>
+              <button class="btn btn-secondary" href="/profile.html">
+                Login
+              </button>
             </form>
           </div>
-            <div class="col m-">
-            <a class="btn btn-contact-posts mb-4" href="http://127.0.0.1:5500/register.html">
+          <div class="col m-">
+            <a class="btn btn-contact-posts mb-4" href="/register.html">
               create new account
             </a>
           </div>
         </div>
-        </div>
       </div>
+    </div>
     <footer>
       <div class="container">
         <div class="row sm-12">
@@ -81,8 +108,8 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
-   <script type="module" src="/src/js/handlers/register.mjs"></script>
-   <script type="module" src="/src/js/handlers/login.mjs"></script>  
-   <script type="module" src="/src/index.mjs"></script> 
+    <script type="module" src="/src/js/handlers/register.mjs"></script>
+    <script type="module" src="/src/js/handlers/login.mjs"></script>
+    <script type="module" src="/src/index.mjs"></script>
   </body>
 </html>
