@@ -1,15 +1,34 @@
+//todo: Rename to SaveAsJson
 export function save(key, value) {
-    localStorage.setItem(key, JSON.stringefy(value));
+    localStorage.setItem(key, JSON.stringify(value));
+}
+
+export function saveString(key, value) {
+    localStorage.setItem(key, value);
+}
+
+
+export function isLoggedIn(key, value) {
+    return load("token") !== null;
+}
+
+function isJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
 }
 
 export function load(key) {
-    try{
+    try {
         const value = localStorage.getItem(key);
-        if (typeof value !== "string"){
+        if (isJsonString(value)) {
             return JSON.parse(value);
         }
         return value;
-    } catch(err) {
+    } catch (err) {
         console.log(err);
         return null
     }
