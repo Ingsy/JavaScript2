@@ -1,17 +1,16 @@
 import { getPost } from "../posts/read.mjs";
+import { displayPosts } from "./displayPosts.mjs";
 
 
 
 export async function singlePost() {
-    const seePost = queryselectorAll("see-Post");
+    const url = new URL(location.href);
+    const id = url.searchParams.get("id");
+    const post = await getPost(id);
+    displayPosts([post], "#singlePost");
 
-    for (let i = 0; i < seePost.length; i++) {
-        seePost[i].addEventListener("click", async () => {
-            const seeThis = "wanne see only this Post?";
-
-            if (confirm(seeThis)) {
-                await getPost(seePost[i].id);
-            }
-        });
-    }
 }
+
+
+
+

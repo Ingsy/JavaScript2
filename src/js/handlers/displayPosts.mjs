@@ -7,8 +7,8 @@ import {
 } from "../api/constants.mjs";
 import { deletePost } from "./deletePost.mjs";
 
-function displayPosts(posts) {
-  const postContainer = document.querySelector("#newsFeed");
+export function displayPosts(posts, containerId) {
+  const postContainer = document.querySelector(containerId);
   postContainer.innerHTML = "";
   for (let i = 0; i < posts.length; i++) {
     let postHtml = "";
@@ -41,7 +41,7 @@ function displayPosts(posts) {
                     <em>${posts[i].created}</em>  
                     </p>
                     <div class="contact-show">
-                    <button class="mb-2 see-Post btn btn-contact-posts" id="${posts[i].id}">see this Post</button>
+                    <button class="mb-2 see-Post btn btn-contact-posts"><a href="/single-post.html?id=${posts[i].id}">see this post</a></button>
                       <button class="mb-2 edit-button btn btn-contact-posts"><a href="/editPost.html?id=${posts[i].id}">edit</a></button>
                      <button class="mb-2 del-button btn btn-contact-posts" id="${posts[i].id}">delete</button>
                     </div>
@@ -59,16 +59,16 @@ export async function PostFeed() {
   const posts = await getPosts();
   postsWithImgbtn.addEventListener("click", function () {
     const filtered = posts.filter(post => post.media);
-    displayPosts(filtered);
+    displayPosts(filtered, "#newsFeed");
   });
 
   postsWithoutImgbtn.addEventListener("click", function () {
     const filtered = posts.filter(post => !post.media);
-    displayPosts(filtered);
+    displayPosts(filtered, "#newsFeed");
   });
 
   allPostsbtn.addEventListener("click", async function () {
-    displayPosts(posts);
+    displayPosts(posts, "#newsFeed");
   });
 
   searchForm.onkeyup = function (event) {
@@ -86,7 +86,7 @@ export async function PostFeed() {
       }
       return false;
     });
-    displayPosts(filteredSearch);
+    displayPosts(filteredSearch, "#newsFeed");
     if (filteredSearch.length === 0) {
       alert("No posts found");
     }
@@ -96,7 +96,7 @@ export async function PostFeed() {
 
 export async function AllPosts() {
   let posts = await getPosts();
-  displayPosts(posts);
+  displayPosts(posts, "#newsFeed");
 
   deletePost();
 }
