@@ -15,6 +15,7 @@ export const filterParam = params.get("filter");
 
 export const postsWithImgbtn = document.querySelector(".posts-img");
 export const postsWithoutImgbtn = document.querySelector(".posts-no-img");
+export const MyPostsOnly = document.querySelector(".myPostsOnly")
 export const allPostsbtn = document.querySelector(".all-posts");
 
 export const ProfileName = document.querySelector("#ProfileName");

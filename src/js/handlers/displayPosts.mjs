@@ -3,9 +3,13 @@ import {
   postsWithImgbtn,
   postsWithoutImgbtn,
   allPostsbtn,
-  searchForm
+  searchForm,
+  userName,
+  MyPostsOnly
 } from "../api/constants.mjs";
 import { deletePost } from "./deletePost.mjs";
+
+
 
 export function displayPosts(posts, containerId) {
   const postContainer = document.querySelector(containerId);
@@ -14,10 +18,9 @@ export function displayPosts(posts, containerId) {
     let postHtml = "";
     postHtml = `
     <div class="col mt-4">
-    <h2>Newsfeed</h2>
         <div class="card">
             <div class="contact-show">
-                <h4>${posts[i].id}</h4>
+                <h4>${posts[i].author.name}</h4>
                 <img
                       src="${posts[i].avatar}"
                       class="card-img-top text-end"
@@ -42,9 +45,12 @@ export function displayPosts(posts, containerId) {
                     <em>${posts[i].created}</em>  
                     </p>
                     <div class="contact-show">
-                    <button class="mb-2 see-Post btn btn-contact-posts"><a href="/single-post.html?id=${posts[i].id}">see this post</a></button>
-                      <button class="mb-2 edit-button btn btn-contact-posts"><a href="/editPost.html?id=${posts[i].id}">edit</a></button>
-                     <button class="mb-2 del-button btn btn-contact-posts" id="${posts[i].id}">delete</button>
+                    <button class="mb-2 see-Post btn btn-contact-posts"><a href="/single-post.html?id=${posts[i].id}">see this post</a></button>`;
+    if (posts[i].author.name === userName) {
+      postHtml += ` <button class="mb-2 edit-button btn btn-contact-posts"><a href="/editPost.html?id=${posts[i].id}">edit</a></button>
+      <button class="mb-2 del-button btn btn-contact-posts" id="${posts[i].id}">delete</button>`;
+    }
+    postHtml += ` 
                     </div>
                     </div>
                   </div>
@@ -65,6 +71,11 @@ export async function PostFeed() {
 
   postsWithoutImgbtn.addEventListener("click", function () {
     const filtered = posts.filter(post => !post.media);
+    displayPosts(filtered, "#newsFeed");
+  });
+
+  MyPostsOnly.addEventListener("click", function () {
+    const filtered = posts.filter(post => post.author.name === userName);
     displayPosts(filtered, "#newsFeed");
   });
 
