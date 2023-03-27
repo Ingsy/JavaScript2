@@ -17,9 +17,10 @@ export async function login(profile) {
     });
 
     const result = await response.json();
-    console.log("loginResults ->", result);
+
     storage.saveString("token", result.accessToken);
     storage.save("profile", { name: result.name, email: result.email });
+
 
     alert("You are now logged in");
     window.location.href = "/profile.html"
