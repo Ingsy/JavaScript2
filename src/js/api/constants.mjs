@@ -17,3 +17,5 @@ export const postsWithImgbtn = document.querySelector(".posts-img");
 export const postsWithoutImgbtn = document.querySelector(".posts-no-img");
 export const allPostsbtn = document.querySelector(".all-posts");
 
+export const ProfileName = document.querySelector("#ProfileName");
+export const userName = localStorage.getItem("userName")
