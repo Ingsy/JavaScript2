@@ -14,6 +14,7 @@ export function displayPosts(posts, containerId) {
     let postHtml = "";
     postHtml = `
     <div class="col mt-4">
+    <h2>Newsfeed</h2>
         <div class="card">
             <div class="contact-show">
                 <h4>${posts[i].id}</h4>

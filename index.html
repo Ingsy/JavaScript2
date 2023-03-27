@@ -58,6 +58,7 @@
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
+                onchange=""
               />
               <button class="btn btn-outline-secondary" type="submit">
                 Search
@@ -68,11 +69,49 @@
       </nav>
       <div class="container text-center" id="">
         <div class="row">
-          <div class="col-sm-1 col-md-3 col-lg-3">
-              </div>
-          <div class="col-sm-1 col-md-6 col-lg-6" id="newsFeed">
+          <div class="col-sm-1 col-md-6 col-lg-6 mt-4" id="newsFeed">
             <h2>Newsfeed</h2>
             
+              </div>
+              <div class="col-md-6 col-lg-6 mt-4">
+                <h2>Hello World</h2>
+                <div class="row">
+                <div class="col mb-4 mt-4">
+                <div class="card"> 
+
+                    <div class="contact-show m-1">
+                      <img
+                        src="/images/user.png"
+                        class="card-img-top"
+                        alt="profile-photo"
+                      />
+                      <h4>
+                        Whats on your mind today?
+                      </h4>
+                    </div>
+                    <hr class="mx-4 my-4 mt-1 mb-2">
+                    <form id="createPost">
+                      <div class="mx-4">
+                        <label for="" class="form-label"></label>
+                        <input type="text" name="title" class="form-control" placeholder="Title" required>
+                      </div>
+                      <div class="mx-4">
+                        <label for="" class="form-label"></label>
+                        <textarea type="text" name="body" class="form-control" placeholder="body" required></textarea>
+                      </div>
+                      <div class="mx-4">
+                        <label for="" class="form-label"></label>
+                        <input type="text" name="tags" class="form-control" placeholder="tags">
+                      </div>
+                      <div class="mx-4 mb-3">
+                        <label for="" class="form-label"></label>
+                        <input type="url" name="media" class="form-control" placeholder="media">
+                      </div>
+                      <button class="btn btn-secondary mb-4">create Post</button>
+                    </form>
+                </div>
+                  </div>
+                    </div>
               </div>
                </div>
               </div>
