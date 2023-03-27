@@ -19,6 +19,7 @@ if (path === "/login.html") {
 } else if (path === "/profile.html") {
   listeners.setCreatePostFormListener();
   setLogOut();
+  listeners.addProfileName();
 } else if (path === "/editPost.html") {
   listeners.setUpdatePostFormListener();
 } else if (path === "/index.html") {
@@ -28,4 +29,6 @@ if (path === "/login.html") {
 } else if (path === "/single-post.html") {
   listeners.singlePost();
 }
+
+
 

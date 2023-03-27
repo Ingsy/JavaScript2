@@ -4,9 +4,9 @@ import * as storage from "../../storage/index.mjs";
 const action = "/auth/login";
 const method = "post";
 
-export async function login(profile) {
+export async function login(profile, userName) {
     const loginURL = API_SOCIAL_URL + action;
-    const body = JSON.stringify(profile);
+    const body = JSON.stringify(profile, userName);
 
     const response = await fetch(loginURL, {
         headers: {
@@ -20,6 +20,7 @@ export async function login(profile) {
 
     storage.saveString("token", result.accessToken);
     storage.save("profile", { name: result.name, email: result.email });
+    storage.saveString("userName", result.name);
 
 
     alert("You are now logged in");

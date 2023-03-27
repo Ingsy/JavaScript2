@@ -1,7 +1,8 @@
 import { ProfileName, userName } from "../api/constants.mjs";
 
-export function ProfileName() {
-    ProfileName.innerHTML = `${userName}`;
+export function addProfileName() {
+  ProfileName.innerHTML = `${userName}`;
 }
 
-ProfileName();
+
+

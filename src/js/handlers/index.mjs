@@ -5,3 +5,4 @@ export * from "./login.mjs";
 export * from "./displayPosts.mjs";
 export * from "./deletePost.mjs";
 export * from "./singlePost.mjs";
+export * from "./profile.mjs";
