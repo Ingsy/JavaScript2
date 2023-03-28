@@ -45,7 +45,8 @@ export function displayPosts(posts, containerId) {
     postHtml += `
                   </div>
                     <hr class="mb-0"><p class="text-start">
-                    <em>${posts[i].created}</em>  
+                    <em>${posts[i].created}</em>
+                    <em class="text-end">id:${posts[i].id}</em> 
                     </p>
                     <div class="contact-show">
                     <button class="mb-2 see-Post btn btn-contact-posts"><a href="/single-post.html?id=${posts[i].id}">see this post</a></button>`;
@@ -95,7 +96,9 @@ export async function PostFeed() {
       if (post.body.toLowerCase().includes(searchValue)) {
         return true;
       }
-      console.log(post);
+      if (post.author.name.toLowerCase().includes(searchValue)) {
+        return true;
+      }
       if (post.id.toString().includes(searchValue)) {
         return true;
       }
