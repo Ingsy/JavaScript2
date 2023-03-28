@@ -46,6 +46,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="#" class="dropdown-item posts-img">Posts with images</a></li>
                   <li><a href="#" class="dropdown-item posts-no-img">Posts without images</a></li>
+                  <li><a href="#" class="dropdown-item myPostsOnly">My posts</a></li>
                   <li><a href="#" class="dropdown-item all-posts">All Posts</a></li>
                 </ul>
               </li>
@@ -55,10 +56,9 @@
             <form class="d-flex" role="search" id="searchform">
               <input
                 class="form-control me-2"
-                type="search"
+                type="Search"
                 placeholder="Search"
                 aria-label="Search"
-                onchange=""
               />
               <button class="btn btn-outline-secondary" type="submit">
                 Search
@@ -90,7 +90,7 @@
                       </h4>
                     </div>
                     <hr class="mx-4 my-4 mt-1 mb-2">
-                    <form id="createPost">
+                    <form class="createPost">
                       <div class="mx-4">
                         <label for="" class="form-label"></label>
                         <input type="text" name="title" class="form-control" placeholder="Title" required>

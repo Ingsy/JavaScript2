@@ -8,15 +8,15 @@ export const API_SOCIAL_URL = `${API_HOST_URL}${API_BASE_URL}${API_SOCIAL_BASE}`
 export const params = new URLSearchParams(window.location.search);
 export const postID = params.get("postID");
 export const postIdUrl = `${API_SOCIAL_URL}posts/${postID}?_author=true`;
-export const searchForm = document.querySelector("#searchform")
+export const searchForm = document.querySelector("#searchform");
 
 export const filterParam = params.get("filter");
 //buttons 
 
 export const postsWithImgbtn = document.querySelector(".posts-img");
 export const postsWithoutImgbtn = document.querySelector(".posts-no-img");
-export const MyPostsOnly = document.querySelector(".myPostsOnly")
+export const MyPostsOnly = document.querySelector(".myPostsOnly");
 export const allPostsbtn = document.querySelector(".all-posts");
 
 export const ProfileName = document.querySelector("#ProfileName");
-export const userName = localStorage.getItem("userName")
+export const userName = localStorage.getItem("userName");
