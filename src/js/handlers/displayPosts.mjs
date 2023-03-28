@@ -20,12 +20,15 @@ export function displayPosts(posts, containerId) {
     <div class="col mt-4">
         <div class="card">
             <div class="contact-show">
-                <h4>${posts[i].author.name}</h4>
-                <img
-                      src="${posts[i].avatar}"
-                      class="card-img-top text-end"
-                      alt="avatar"
-                    />
+                <h4>${posts[i].author.name}</h4>`;
+    if (posts[i].avatar) {
+      postHtml += `<img
+      src="${posts[i].avatar}"
+      class="card-img-top text-end"
+      alt="avatar"
+    />`;
+    }
+    postHtml += `
                 </div>
                   <div class="card-body">
                   <div class="text-center">
