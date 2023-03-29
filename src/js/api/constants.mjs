@@ -9,6 +9,7 @@ export const params = new URLSearchParams(window.location.search);
 export const postID = params.get("postID");
 export const postIdUrl = `${API_SOCIAL_URL}posts/${postID}?_author=true`;
 export const searchForm = document.querySelector("#searchform");
+export const searchInput = document.querySelector("#searchInput");
 
 export const filterParam = params.get("filter");
 //buttons 
@@ -20,3 +21,4 @@ export const allPostsbtn = document.querySelector(".all-posts");
 
 export const ProfileName = document.querySelector("#ProfileName");
 export const userName = localStorage.getItem("userName");
+

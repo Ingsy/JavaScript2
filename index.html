@@ -56,7 +56,8 @@
             <form class="d-flex" role="search" id="searchform">
               <input
                 class="form-control me-2"
-                type="Search"
+                id="searchInput"
+                type="text"
                 placeholder="Search"
                 aria-label="Search"
               />
@@ -69,12 +70,10 @@
       </nav>
       <div class="container text-center" id="">
         <div class="row">
+          <h2 class="mb-4">Hello World</h2>
           <div class="col-sm-1 col-md-6 col-lg-6 mt-4" id="newsFeed">
-            <h2>Newsfeed</h2>
-            
               </div>
               <div class="col-md-6 col-lg-6 mt-4">
-                <h2>Hello World</h2>
                 <div class="row">
                 <div class="col mb-4 mt-4">
                 <div class="card"> 
@@ -90,7 +89,7 @@
                       </h4>
                     </div>
                     <hr class="mx-4 my-4 mt-1 mb-2">
-                    <form class="createPost">
+                    <form id="createPost">
                       <div class="mx-4">
                         <label for="" class="form-label"></label>
                         <input type="text" name="title" class="form-control" placeholder="Title" required>
@@ -113,6 +112,7 @@
                   </div>
                     </div>
               </div>
+              
                </div>
               </div>
             </div>
@@ -139,6 +139,5 @@
     ></script>
     <script src="/src/index.mjs" type="module"></script>
     <script src="/src/js/handlers/index.mjs" type="module"></script>
-  
   </body>
 </html>

@@ -4,6 +4,7 @@ import {
   postsWithoutImgbtn,
   allPostsbtn,
   searchForm,
+  searchInput,
   userName,
   MyPostsOnly
 } from "../api/constants.mjs";
@@ -87,13 +88,12 @@ export async function PostFeed() {
     displayPosts(posts, "#newsFeed");
   });
 
-  searchForm.onkeyup = function (event) {
-    const searchValue = event.target.value.trim().toLowerCase();
+  function doSearch(searchValue) {
     const filteredSearch = posts.filter(function (post) {
       if (post.title.toLowerCase().includes(searchValue)) {
         return true;
       }
-      if (post.body.toLowerCase().includes(searchValue)) {
+      if (post.body && post.body.toLowerCase().includes(searchValue)) {
         return true;
       }
       if (post.author.name.toLowerCase().includes(searchValue)) {
@@ -110,7 +110,16 @@ export async function PostFeed() {
     }
 
   };
-}
+
+  // onchange only fires when input not in focus
+  searchInput.onchange = (event) => doSearch(event.target.value.trim().toLowerCase());
+  searchForm.onsubmit = (event) => {
+    event.preventDefault();
+
+    doSearch(searchInput.value);
+    return false;
+  }
+};
 
 export async function AllPosts() {
   let posts = await getPosts();
