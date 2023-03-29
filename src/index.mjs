@@ -29,6 +29,7 @@ function checkRouting() {
     listeners.PostFeed();
     listeners.AllPosts();
     listeners.deletePost();
+    listeners.setCreatePostFormListener();
   } else if (path === "/single-post.html") {
     listeners.singlePost();
   }
