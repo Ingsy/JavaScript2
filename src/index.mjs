@@ -5,27 +5,39 @@ import * as storage from "./js/storage/index.mjs";
 
 const path = location.pathname;
 
-if (!storage.isLoggedIn()) {
-  console.log("Not logged in");
-} else {
-  const profile = storage.load("profile");
-  console.log(profile.name, profile.email);
+function checkRouting() {
+  if (path === "/login.html") {
+    listeners.setLoginFormListener();
+    return;
+  } else if (path === "/register.html") {
+    listeners.setRegisterFormListener();
+    return;
+  }
+
+  if (!storage.isLoggedIn()) {
+    window.location.href = "/login.html"
+
+  }
+
+  if (path === "/profile.html") {
+    listeners.setCreatePostFormListener();
+    setLogOut();
+    listeners.addProfileName();
+  } else if (path === "/editPost.html") {
+    listeners.setUpdatePostFormListener();
+  } else if (path === "/index.html") {
+    listeners.PostFeed();
+    listeners.AllPosts();
+    listeners.deletePost();
+    listeners.setCreatePostFormListener();
+    listeners.addProfileName();
+  } else if (path === "/single-post.html") {
+    listeners.singlePost();
+  }
 }
 
-if (path === "/login.html") {
-  listeners.setLoginFormListener();
-} else if (path === "/register.html") {
-  listeners.setRegisterFormListener();
-} else if (path === "/profile.html") {
-  listeners.setCreatePostFormListener();
-  setLogOut();
-} else if (path === "/editPost.html") {
-  listeners.setUpdatePostFormListener();
-} else if (path === "/index.html") {
-  listeners.PostFeed();
-  listeners.AllPosts();
-  listeners.deletePost();
-} else if (path === "/single-post.html") {
-  listeners.singlePost();
-}
+window.onpaint = checkRouting();
+
+
+
 
