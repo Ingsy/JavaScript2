@@ -30,6 +30,7 @@ function checkRouting() {
     listeners.AllPosts();
     listeners.deletePost();
     listeners.setCreatePostFormListener();
+    listeners.addProfileName();
   } else if (path === "/single-post.html") {
     listeners.singlePost();
   }
